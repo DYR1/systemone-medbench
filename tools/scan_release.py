@@ -14,6 +14,12 @@ PATTERNS={
  'internal_host':re.compile(r'yuque'+r'\.antfin\.com|/yijian'+r'[0-9]+/'),
 }
 BAD_NAMES={'.env','.DS_Store','id_rsa','id_ed25519','automation.toml'}
+def is_presentation_png(path,root,data):
+    return (path.relative_to(root).parts[0]=='assets'
+            and path.suffix.lower()=='.png'
+            and data.startswith(b'\x89PNG\r\n\x1a\n')
+            and data.endswith(b'\x00\x00\x00\x00IEND\xaeB`\x82'))
+
 def scan(root):
     issues=[];n=0;total=0
     for p in sorted(root.rglob('*')):
@@ -24,10 +30,13 @@ def scan(root):
         if p.name in BAD_NAMES or p.suffix in ['.pyc','.pem','.safetensors']:
             issues.append({'file':rel,'kind':'forbidden_artifact'})
         try:
-            with p.open(encoding='utf-8') as f:
-                for i,line in enumerate(f,1):
-                    for kind,pat in PATTERNS.items():
-                        if pat.search(line):issues.append({'file':rel,'line':i,'kind':kind})
+            data=p.read_bytes()
+            # Presentation PNGs are expected release assets. Still scan readable
+            # content (including metadata) for secrets; other binaries fail closed.
+            errors='replace' if is_presentation_png(p,root,data) else 'strict'
+            for i,line in enumerate(data.decode('utf-8',errors=errors).splitlines(),1):
+                for kind,pat in PATTERNS.items():
+                    if pat.search(line):issues.append({'file':rel,'line':i,'kind':kind})
         except UnicodeDecodeError:issues.append({'file':rel,'kind':'binary_requires_review'})
     return {'clean':not issues,'files':n,'bytes':total,'issues':issues,
             'note':'Pattern scan plus allowlisted assembly; not a guarantee against all personal or confidential information.'}
