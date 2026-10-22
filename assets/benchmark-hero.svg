@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" role="img" aria-labelledby="title desc">
+  <title id="title">Medical Decision Reliability Benchmark</title>
+  <desc id="desc">A unified evaluation of medical decision performance, format robustness, abstention awareness, and probability-based reliability.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#122739"/><stop offset="1" stop-color="#143e46"/></linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#8db6bb" opacity=".16"/></pattern>
+  </defs>
+  <rect width="1200" height="350" rx="22" fill="url(#bg)"/>
+  <rect x="740" width="460" height="350" rx="22" fill="url(#grid)"/>
+  <path d="M0 344H1200" stroke="#63d7bd" stroke-width="12"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="48" y="42" width="42" height="4" rx="2" fill="#7de1c8"/>
+    <text x="104" y="51" fill="#b6dfd7" font-size="15" font-weight="700" letter-spacing="2.2">SYSTEM-ONE × MEDICINE</text>
+    <text x="48" y="127" fill="#fff" font-size="48" font-weight="700">Medical Decision</text>
+    <text x="48" y="186" fill="#fff" font-size="48" font-weight="700">Reliability Benchmark</text>
+    <text x="50" y="231" fill="#c2d8dd" font-size="21">Evaluate decisions beyond accuracy.</text>
+    <text x="50" y="291" fill="#9fbfc7" font-size="17">Jev · Jev-like models · Medical task families</text>
+    <rect x="784" y="39" width="367" height="272" rx="18" fill="#fff" fill-opacity=".055" stroke="#73969e" stroke-opacity=".35"/>
+    <g fill="#e9f4f2" font-size="20" font-weight="600">
+      <text x="854" y="92">Overall performance</text>
+      <text x="854" y="152">Format robustness</text>
+      <text x="854" y="212">Abstention awareness</text>
+      <text x="854" y="272">Probability reliability</text>
+    </g>
+    <g fill="#78dfc6" font-size="17" font-weight="700"><text x="810" y="92">01</text><text x="810" y="152">02</text><text x="810" y="212">03</text><text x="810" y="272">04</text></g>
+    <g stroke="#91b2b9" stroke-opacity=".2"><path d="M809 114H1128"/><path d="M809 174H1128"/><path d="M809 234H1128"/></g>
+  </g>
+</svg>

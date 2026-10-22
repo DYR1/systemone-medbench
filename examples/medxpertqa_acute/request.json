@@ -1,0 +1,63 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "task": "Answer the original clinical question using its supplied case and all ten original options. Select exactly ONE option.",
+    "context": {
+      "case_and_question": "A 19-year-old man is brought to the emergency department by ambulance due to erratic behavior. He is awake and shouting, “I’m going to kill that guy!” During the evaluation, the patient reports no history of medical or psychiatric conditions, denies recent alcohol or drug use, and does not appear intoxicated. He is cooperative during the interview, providing accurate details about his name, address, the date, the hospital location, and the current president. Physical examination reveals no signs of head trauma, and his fingerstick glucose level is normal. \n\nThe patient expresses anger toward his father, who verbally assaulted his mother, describing the situation as “the final straw.” He states that he plans to stab his father while he is asleep and repeatedly asks you not to inform the police. The father had called 911, prompting the paramedics to bring the patient to the emergency department. \n\nA police officer arrives and requests information about the identity of the person the patient threatened to kill. What is the most appropriate next step in this situation?"
+    },
+    "options": {
+      "A": "Document the threat in the medical record but decline to inform the police directly",
+      "B": "Tell the police officer that the patient is referring to his father",
+      "C": "Refuse to disclose any information to the police officer due to patient confidentiality",
+      "D": "Call the hospital’s risk management department to discuss a potential breach of patient confidentiality",
+      "E": "Recommend that the police officer obtain a court order for disclosure of information",
+      "F": "Inform the police officer that you cannot confirm the identity of the individual being threatened",
+      "G": "Release a transcript of the visit to the police officer if the patient signs a disclosure consent",
+      "H": "Call the patient’s father to warn him about the threat instead of involving the police",
+      "I": "Inform the patient that you must notify the police and proceed with disclosure",
+      "J": "Provide the police officer with only general information about the patient’s condition"
+    },
+    "task_definition": {
+      "target": "Select the original reference next/initial clinical action from the supplied candidates.",
+      "scope": "Text-only, closed-set exam-derived acute-care assessment; not prospective clinical validation or an agent workflow. Preserve the original decision time and question. Do not invent unreported test results. All ten options are retained, including plausible alternatives."
+    },
+    "field_descriptions": {
+      "task": "Decision question and response instructions; not a patient observation.",
+      "context": "Patient information available for this task; absent findings are unknown, not normal.",
+      "options": "Map of option IDs to candidate meanings. IDs are response symbols, not measurements or severity scores.",
+      "task_definition": "General endpoint, time-window and scope rules shared across cases; not the case outcome.",
+      "context.case_and_question": "Original patient vignette and case-specific question. A duplicated trailing Answer Choices block, if present, is removed because unchanged options are supplied separately.",
+      "field_descriptions": "Dictionary explaining every model-visible field; these descriptions are not patient observations.",
+      "task_definition.target": "Exact target and response meanings for this task.",
+      "task_definition.scope": "Limits of available information and of this derived evaluation.",
+      "options.A": "Candidate A. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference.",
+      "options.B": "Candidate B. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference.",
+      "options.C": "Candidate C. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference.",
+      "options.D": "Candidate D. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference.",
+      "options.E": "Candidate E. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference.",
+      "options.F": "Candidate F. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference.",
+      "options.G": "Candidate G. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference.",
+      "options.H": "Candidate H. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference.",
+      "options.I": "Candidate I. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference.",
+      "options.J": "Candidate J. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference."
+    }
+  },
+  "questions": {
+    "decision": {
+      "type": "choice",
+      "instructions": "Answer the original clinical question using its supplied case and all ten original options. Select exactly ONE option.",
+      "criteria": {
+        "A": "Document the threat in the medical record but decline to inform the police directly",
+        "B": "Tell the police officer that the patient is referring to his father",
+        "C": "Refuse to disclose any information to the police officer due to patient confidentiality",
+        "D": "Call the hospital’s risk management department to discuss a potential breach of patient confidentiality",
+        "E": "Recommend that the police officer obtain a court order for disclosure of information",
+        "F": "Inform the police officer that you cannot confirm the identity of the individual being threatened",
+        "G": "Release a transcript of the visit to the police officer if the patient signs a disclosure consent",
+        "H": "Call the patient’s father to warn him about the threat instead of involving the police",
+        "I": "Inform the patient that you must notify the police and proceed with disclosure",
+        "J": "Provide the police officer with only general information about the patient’s condition"
+      }
+    }
+  }
+}

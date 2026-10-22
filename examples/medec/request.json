@@ -1,0 +1,36 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "task": "Does the supplied clinical text contain a medical error? Judge medical correctness, not spelling, grammar, or writing style. Decide only whether an error is present; do not locate or correct it.",
+    "context": "A 29-year-old internal medicine resident presents to the emergency department with complaints of fevers, diarrhea, abdominal pain, and skin rash for 2 days. He feels fatigued and has lost his appetite. On further questioning, he says that he returned from his missionary trip to Brazil last week. He is excited as he talks about his trip. Besides a worthy clinical experience, he also enjoyed local outdoor activities, like swimming and rafting. His past medical history is insignificant. The blood pressure is 120/70 mm Hg, the pulse is 100/min, and the temperature is 38.3 C (100.9 F). On examination, there is a rash on the legs. Patient's symptoms are suspected to be due to hepatitis A. The rest of the examination is normal.",
+    "options": {
+      "A": "No medical error is present.",
+      "B": "A medical error is present."
+    },
+    "task_definition": {
+      "target": "Decide whether at least one medically incorrect assertion is present in the supplied clinical text, including errors in diagnosis, causative organism, management, treatment, or pharmacotherapy. A = no medical error; B = a medical error is present.",
+      "scope": "Judge assertions in their clinical context using medical knowledge. A spelling/style issue or an unreported detail alone is not evidence of a medical error. Do not localize the erroneous sentence or generate a correction. This is retrospective text review, not real-time triage."
+    },
+    "field_descriptions": {
+      "task": "Decision question and response instructions; not a patient observation.",
+      "context": "Clinical narrative to inspect for medical errors; its assertions are to be evaluated, not assumed correct.",
+      "options": "Map of option IDs to candidate meanings. IDs are response symbols, not measurements or severity scores.",
+      "task_definition": "General endpoint, time-window and scope rules shared across cases; not the case outcome.",
+      "field_descriptions": "Data dictionary: keys are input-relative paths; []=every array item; [0]/[1]=zero-based positional columns. Descriptions are not patient observations or answers.",
+      "options.A": "Candidate meaning for response ID A; the option text defines the category/action, not whether it is correct.",
+      "options.B": "Candidate meaning for response ID B; the option text defines the category/action, not whether it is correct.",
+      "task_definition.target": "Definition of the decision target and candidate meanings.",
+      "task_definition.scope": "Permitted evidence, missing-information rules and limits of the task."
+    }
+  },
+  "questions": {
+    "decision": {
+      "type": "choice",
+      "instructions": "Does the supplied clinical text contain a medical error? Judge medical correctness, not spelling, grammar, or writing style. Decide only whether an error is present; do not locate or correct it.",
+      "criteria": {
+        "A": "No medical error is present.",
+        "B": "A medical error is present."
+      }
+    }
+  }
+}

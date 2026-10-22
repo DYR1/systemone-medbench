@@ -1,0 +1,3 @@
+# CPU data validation, sharding, API evaluation and scoring use Python's standard library.
+# Optional download tool only. GPU model dependencies are isolated per docs/MODELS.md.
+huggingface-hub>=0.34

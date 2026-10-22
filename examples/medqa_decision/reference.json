@@ -1,0 +1,6 @@
+{
+  "id": "medqa_decision::test::0004",
+  "gold": {
+    "label": "B"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "task": "Choose ONE action to take NOW, using only the patient information disclosed so far.",
+    "context": {
+      "patient_messages": [
+        "I am in the middle of a root canal. The dentist keeps opening the tooth and putting medicine in, but the treatment is not finished and I am in a lot of pain. Is that standard?",
+        "No fever, facial swelling, pus, trouble opening my mouth, swallowing trouble, or breathing trouble. The tooth pain is still severe."
+      ]
+    },
+    "options": {
+      "A": "Ask for the smallest necessary clarification before recommending an action.",
+      "B": "Provide self-care or monitoring guidance.",
+      "C": "Recommend nonurgent professional care.",
+      "D": "Recommend urgent or emergency evaluation."
+    },
+    "task_definition": {
+      "target": "A=necessary clarification; B=self-care/monitoring; C=nonurgent professional care; D=urgent/emergency evaluation.",
+      "scope": "Assess the current disclosure prefix, not a later round or final diagnosis. Do not assume missing red-flag information is negative. Choose an action category; do not generate the follow-up question or treatment plan."
+    },
+    "field_descriptions": {
+      "task": "Decision question and response instructions; not a patient observation.",
+      "context": "Patient information available for this task; absent findings are unknown, not normal.",
+      "options": "Map of option IDs to candidate meanings. IDs are response symbols, not measurements or severity scores.",
+      "task_definition": "General endpoint, time-window and scope rules shared across cases; not the case outcome.",
+      "context.patient_messages": "Chronological patient messages available at this decision point, including all prior disclosed information; later messages are excluded.",
+      "field_descriptions": "Dictionary explaining every model-visible field; these descriptions are not patient observations.",
+      "task_definition.target": "Exact target and response meanings for this task.",
+      "task_definition.scope": "Limits of available information and of this derived evaluation.",
+      "options.A": "Candidate A. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference.",
+      "options.B": "Candidate B. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference.",
+      "options.C": "Candidate C. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference.",
+      "options.D": "Candidate D. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference."
+    }
+  },
+  "questions": {
+    "decision": {
+      "type": "choice",
+      "instructions": "Choose ONE action to take NOW, using only the patient information disclosed so far.",
+      "criteria": {
+        "A": "Ask for the smallest necessary clarification before recommending an action.",
+        "B": "Provide self-care or monitoring guidance.",
+        "C": "Recommend nonurgent professional care.",
+        "D": "Recommend urgent or emergency evaluation."
+      }
+    }
+  }
+}

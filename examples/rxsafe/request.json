@@ -1,0 +1,39 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "task": "Using the supplied consultation, select the ONE candidate medication that is appropriate for the presented condition while avoiding the patient-specific contraindication or drug-interaction risk described in the consultation. Do not propose a medication outside the three candidates.",
+    "context": "[Dialogue Start]\n\n(Inquiry Stage)\nDoctor: Hello, what seems to be bothering you recently?\nPatient: Doctor, I've been experiencing fatigue and muscle pain for the past few weeks. I also have a recurring yellowish discoloration on my skin and in the whites of my eyes.\nDoctor: I see. Have you experienced any other symptoms, such as loss of appetite or dark-colored urine?\nPatient: Yes, I have noticed changes in my appetite and urine color as well.\nDoctor: Are you taking any other medications?\nPatient: Yes, I'm currently taking atorvastatin for high cholesterol.\nDoctor: Have you noticed any issues with your cholesterol levels recently?\nPatient: My cholesterol levels have been well-controlled with atorvastatin.\n\n(Diagnosis Stage)\nDoctor: Based on your symptoms, my initial diagnosis suggests that you may be experiencing a flare-up of hepatitis C. The fatigue, muscle pain, and yellowish discoloration on your skin and in the whites of your eyes are common indicators of the condition. However, I'd like to explore whether the atorvastatin might be interacting with your hepatitis C treatment or exacerbating your symptoms.\n\nPatient: I wasn't aware that atorvastatin could affect my hepatitis C condition. Can you explain more?\nDoctor: While atorvastatin is generally safe for patients with hepatitis C, there is a potential interaction with certain hepatitis C medications that could lead to increased liver enzymes. I'd like to run some tests to determine the best course of action for your treatment.\n\n[Dialogue End]\n\nNote: As a doctor, it's essential to consider the potential interactions between atorvastatin and hepatitis C medications, as well as the patient's overall health and medical history, when making a diagnosis and determining the best treatment plan.",
+    "options": {
+      "A": "harvoni",
+      "B": "mavyret",
+      "C": "hyoscyamine"
+    },
+    "task_definition": {
+      "target": "Select exactly one of the three supplied medications for the condition in the consultation, accounting for the stated patient-specific contraindication or drug-interaction risk.",
+      "scope": "Medication suitability, not merely absence of an interaction, is required. Do not recommend an unlisted alternative, invent additional patient history, give dosing instructions, or infer an emergency time limit not stated in the consultation."
+    },
+    "field_descriptions": {
+      "task": "Decision question and response instructions; not a patient observation.",
+      "context": "Original consultation describing the condition, patient circumstances and medications, when provided.",
+      "options": "Map of option IDs to candidate meanings. IDs are response symbols, not measurements or severity scores.",
+      "task_definition": "General endpoint, time-window and scope rules shared across cases; not the case outcome.",
+      "field_descriptions": "Data dictionary: keys are input-relative paths; []=every array item; [0]/[1]=zero-based positional columns. Descriptions are not patient observations or answers.",
+      "options.A": "Candidate meaning for response ID A; the option text defines the category/action, not whether it is correct.",
+      "options.B": "Candidate meaning for response ID B; the option text defines the category/action, not whether it is correct.",
+      "options.C": "Candidate meaning for response ID C; the option text defines the category/action, not whether it is correct.",
+      "task_definition.target": "Definition of the decision target and candidate meanings.",
+      "task_definition.scope": "Permitted evidence, missing-information rules and limits of the task."
+    }
+  },
+  "questions": {
+    "decision": {
+      "type": "choice",
+      "instructions": "Using the supplied consultation, select the ONE candidate medication that is appropriate for the presented condition while avoiding the patient-specific contraindication or drug-interaction risk described in the consultation. Do not propose a medication outside the three candidates.",
+      "criteria": {
+        "A": "harvoni",
+        "B": "mavyret",
+        "C": "hyoscyamine"
+      }
+    }
+  }
+}

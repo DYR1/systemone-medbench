@@ -1,0 +1,52 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "task": "Assess how the NEW information changes the specified hypothesis relative to the preceding scenario. Select ONE rating from A to E.",
+    "context": {
+      "scenario": "A 3-week-old female infant presents to the pediatric emergency department with a 2-hour history of rectal temperature of 101.5F. You elicit further history from the parents.  The mother reports that the infant was born at 33 weeks gestation and was just released from the neonatal intensive care unit 3 days ago. Blood, urine and CSF samples were sent to the laboratory for further evaluation and culture. The patient is admitted to the inpatient service.",
+      "hypothesis": "If you were thinking of:    Starting an antiviral medication (acyclovir)",
+      "new_information": "And then you find: The child had a brief 1 minute seizure-like episode  in the emergency department"
+    },
+    "options": {
+      "A": "-2: Strongly decreases support / appropriateness.",
+      "B": "-1: Slightly decreases support / appropriateness.",
+      "C": "0: Does not change support / appropriateness.",
+      "D": "+1: Slightly increases support / appropriateness.",
+      "E": "+2: Strongly increases support / appropriateness."
+    },
+    "task_definition": {
+      "target": "For a diagnosis, rate change in its likelihood; for an investigation or management proposal, rate change in its appropriateness. Rate the change due to the new information, not the absolute severity of illness.",
+      "scope": "Use this scenario, hypothesis and new information only. Do not assume later evidence. This is script concordance with expert judgments under uncertainty, not a claim that every case has a uniquely correct clinical action."
+    },
+    "field_descriptions": {
+      "task": "Decision question and response instructions; not a patient observation.",
+      "context": "Patient information available for this task; absent findings are unknown, not normal.",
+      "options": "Map of option IDs to candidate meanings. IDs are response symbols, not measurements or severity scores.",
+      "task_definition": "General endpoint, time-window and scope rules shared across cases; not the case outcome.",
+      "context.scenario": "Patient information before the new evidence, in source text.",
+      "context.hypothesis": "The proposed diagnosis, test or management option whose support is being reassessed.",
+      "context.new_information": "Additional evidence supplied at this decision step; only its effect on the given hypothesis is requested.",
+      "field_descriptions": "Dictionary explaining every model-visible field; these descriptions are not patient observations.",
+      "task_definition.target": "Exact target and response meanings for this task.",
+      "task_definition.scope": "Limits of available information and of this derived evaluation.",
+      "options.A": "Candidate A. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference.",
+      "options.B": "Candidate B. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference.",
+      "options.C": "Candidate C. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference.",
+      "options.D": "Candidate D. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference.",
+      "options.E": "Candidate E. Its complete response meaning is given in the option text; the letter itself does not imply severity or preference."
+    }
+  },
+  "questions": {
+    "decision": {
+      "type": "choice",
+      "instructions": "Assess how the NEW information changes the specified hypothesis relative to the preceding scenario. Select ONE rating from A to E.",
+      "criteria": {
+        "A": "-2: Strongly decreases support / appropriateness.",
+        "B": "-1: Slightly decreases support / appropriateness.",
+        "C": "0: Does not change support / appropriateness.",
+        "D": "+1: Slightly increases support / appropriateness.",
+        "E": "+2: Strongly increases support / appropriateness."
+      }
+    }
+  }
+}

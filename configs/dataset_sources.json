@@ -1,0 +1,351 @@
+[
+  {
+    "dataset": "care_bench",
+    "category": "A",
+    "domain": "Triage and Navigation",
+    "parents": 135,
+    "classes": 4,
+    "input_evidence": "Consultation dialogue prefix",
+    "classification_target": "Four next consultation/triage actions",
+    "public": true,
+    "withheld_reason": null,
+    "requests": 945,
+    "variants": {
+      "choice_letters": 135,
+      "choice_numbers": 135,
+      "choice_shuffled": 135,
+      "binary_ovr": 540
+    },
+    "license": "CC-BY-NC-4.0",
+    "source": "https://huggingface.co/datasets/ningkko/CARE-Bench",
+    "source_snapshot": {
+      "repo": "ningkko/CARE-bench",
+      "revision": "090e84167f23c72d29c3a4d9c4f73e857afe0458"
+    },
+    "label_origin": "Released CARE-Bench next-action reference for the retained conversation prefix."
+  },
+  {
+    "dataset": "esi_multisource_extended",
+    "category": "A",
+    "domain": "Triage and Navigation",
+    "parents": 1000,
+    "classes": 5,
+    "input_evidence": "Emergency presentation and observations",
+    "classification_target": "ESI levels 1–5",
+    "public": false,
+    "withheld_reason": "MIMIC-derived records: credentialed data agreement; no public redistribution",
+    "requests": 8000,
+    "variants": {
+      "choice_letters": 1000,
+      "choice_numbers": 1000,
+      "choice_shuffled": 1000,
+      "binary_ovr": 5000
+    },
+    "label_origin": "MIMIC-IV-ED acuity label plus TriageAgent scenario reference; mixed-source parent cohort retained privately."
+  },
+  {
+    "dataset": "mimic_iv_ed",
+    "category": "A",
+    "domain": "Triage and Navigation",
+    "parents": 1000,
+    "classes": 5,
+    "input_evidence": "Emergency triage record",
+    "classification_target": "ESI levels 1–5",
+    "public": false,
+    "withheld_reason": "MIMIC-derived records: credentialed data agreement; no public redistribution",
+    "requests": 8000,
+    "variants": {
+      "choice_letters": 1000,
+      "choice_numbers": 1000,
+      "choice_shuffled": 1000,
+      "binary_ovr": 5000
+    },
+    "label_origin": "Source triage acuity annotation (ESI); not newly adjudicated."
+  },
+  {
+    "dataset": "ramaswamy_triage",
+    "category": "A",
+    "domain": "Triage and Navigation",
+    "parents": 960,
+    "classes": 4,
+    "input_evidence": "Patient scenario and demographic framing",
+    "classification_target": "Four urgency/action levels; acceptable-label set retained",
+    "public": true,
+    "withheld_reason": null,
+    "requests": 6720,
+    "variants": {
+      "choice_letters": 960,
+      "choice_numbers": 960,
+      "choice_shuffled": 960,
+      "binary_ovr": 3840
+    },
+    "license": "CC0-1.0",
+    "source": "https://github.com/ashwinra-code/gpt-health-eval",
+    "source_snapshot": {
+      "revision": "217352f4a5144390f2af30042e208167b14b9268"
+    },
+    "label_origin": "Author-released scenario triage reference; source-defined acceptable alternatives retained."
+  },
+  {
+    "dataset": "clibench_diagnosis_derived",
+    "category": "B",
+    "domain": "Clinical Judgment",
+    "parents": 1000,
+    "classes": 4,
+    "input_evidence": "Discharge-derived medical evidence",
+    "classification_target": "Four case-specific diagnostic candidates",
+    "public": false,
+    "withheld_reason": "MIMIC-derived records: credentialed data agreement; no public redistribution",
+    "requests": 9000,
+    "variants": {
+      "choice_letters": 1000,
+      "choice_numbers": 1000,
+      "choice_shuffled": 1000,
+      "binary_ovr": 4000,
+      "choice_none": 1000,
+      "choice_abstain": 1000
+    },
+    "label_origin": "Source-derived ICD diagnostic code mapped to the benchmark candidate set (proxy decision target)."
+  },
+  {
+    "dataset": "medcalc_acute_assessment",
+    "category": "B",
+    "domain": "Clinical Judgment",
+    "parents": 41,
+    "classes": 2,
+    "input_evidence": "Calculator inputs and rule definitions",
+    "classification_target": "Threshold met / not met",
+    "public": true,
+    "withheld_reason": null,
+    "requests": 246,
+    "variants": {
+      "choice_letters": 41,
+      "choice_numbers": 41,
+      "choice_shuffled": 41,
+      "binary_ovr": 82,
+      "choice_abstain": 41
+    },
+    "license": "CC-BY-SA-4.0",
+    "source": "https://github.com/nikhilk7153/MedCalc-Bench-Verified",
+    "source_snapshot": {
+      "repo": "nikhilk7153/MedCalc-Bench-Verified",
+      "revision": "801592132bfd833f049b517a4e013e00a5fc40fa"
+    },
+    "label_origin": "Verified source calculator answer mapped to the stated decision threshold."
+  },
+  {
+    "dataset": "medqa_decision",
+    "category": "B",
+    "domain": "Clinical Judgment",
+    "parents": 252,
+    "classes": 4,
+    "input_evidence": "Medical examination vignette",
+    "classification_target": "Four case-specific answers",
+    "public": true,
+    "withheld_reason": null,
+    "requests": 2268,
+    "variants": {
+      "choice_letters": 252,
+      "choice_numbers": 252,
+      "choice_shuffled": 252,
+      "binary_ovr": 1008,
+      "choice_none": 252,
+      "choice_abstain": 252
+    },
+    "license": "CC-BY-4.0",
+    "source": "https://huggingface.co/datasets/GBaker/MedQA-USMLE-4-options",
+    "source_snapshot": {
+      "repo": "GBaker/MedQA-USMLE-4-options",
+      "revision": "0fb93dd23a7339b6dcd27e241cb9b5eca62d4d18"
+    },
+    "label_origin": "Original multiple-choice examination answer key."
+  },
+  {
+    "dataset": "medxpertqa_acute",
+    "category": "B",
+    "domain": "Clinical Judgment",
+    "parents": 130,
+    "classes": 10,
+    "input_evidence": "Text-only expert medical problem",
+    "classification_target": "Ten case-specific answers",
+    "public": true,
+    "withheld_reason": null,
+    "requests": 1950,
+    "variants": {
+      "choice_letters": 130,
+      "choice_numbers": 130,
+      "choice_shuffled": 130,
+      "binary_ovr": 1300,
+      "choice_none": 130,
+      "choice_abstain": 130
+    },
+    "license": "MIT",
+    "source": "https://huggingface.co/datasets/TsinghuaC3I/MedXpertQA",
+    "source_snapshot": {
+      "repo": "TsinghuaC3I/MedXpertQA",
+      "revision": "7e7c465a68eb2b866926bfa59c8c9d17a8daba65"
+    },
+    "label_origin": "Original text-only expert multiple-choice answer key."
+  },
+  {
+    "dataset": "mimic_cdm",
+    "category": "B",
+    "domain": "Clinical Judgment",
+    "parents": 1000,
+    "classes": 4,
+    "input_evidence": "Medical case presentation",
+    "classification_target": "Four candidate diagnoses",
+    "public": false,
+    "withheld_reason": "MIMIC-derived records: credentialed data agreement; no public redistribution",
+    "requests": 9000,
+    "variants": {
+      "choice_letters": 1000,
+      "choice_numbers": 1000,
+      "choice_shuffled": 1000,
+      "binary_ovr": 4000,
+      "choice_none": 1000,
+      "choice_abstain": 1000
+    },
+    "label_origin": "Source case diagnosis mapped to the benchmark four-way candidates."
+  },
+  {
+    "dataset": "sct_acute",
+    "category": "B",
+    "domain": "Clinical Judgment",
+    "parents": 78,
+    "classes": 5,
+    "input_evidence": "Hypothesis and additional information",
+    "classification_target": "Five evidence-effect levels; expert-reference distribution",
+    "public": true,
+    "withheld_reason": null,
+    "requests": 702,
+    "variants": {
+      "choice_letters": 78,
+      "choice_numbers": 78,
+      "choice_shuffled": 78,
+      "binary_ovr": 390,
+      "choice_abstain": 78
+    },
+    "license": "MIT",
+    "source": "https://github.com/ARISENetwork/mast/tree/main/benchmarks/sct",
+    "source_snapshot": {
+      "repo": "ARISENetwork/mast",
+      "revision": "57a12c5490f3a7a6b0a6ce4e0d49f8e393ff49ee"
+    },
+    "label_origin": "Source expert-response distribution; maximum-score option(s) count as correct."
+  },
+  {
+    "dataset": "medec",
+    "category": "C",
+    "domain": "Safety Review",
+    "parents": 509,
+    "classes": 2,
+    "input_evidence": "Medical narrative",
+    "classification_target": "Error present / absent",
+    "public": true,
+    "withheld_reason": null,
+    "requests": 2545,
+    "variants": {
+      "choice_letters": 509,
+      "choice_numbers": 509,
+      "choice_shuffled": 509,
+      "binary_ovr": 1018
+    },
+    "license": "CC-BY-4.0",
+    "source": "https://huggingface.co/datasets/mkieffer/MEDEC-MS",
+    "source_snapshot": {
+      "repo": "mkieffer/MEDEC-MS",
+      "revision": "b7427f3f80c36f5a4f81173ff6e28bb333156db5"
+    },
+    "label_origin": "Public MS source error/no-error annotation."
+  },
+  {
+    "dataset": "medval_review",
+    "category": "C",
+    "domain": "Safety Review",
+    "parents": 388,
+    "classes": 4,
+    "input_evidence": "Source text and text to be reviewed",
+    "classification_target": "Four source-defined reliability grades",
+    "public": true,
+    "withheld_reason": null,
+    "requests": 2716,
+    "variants": {
+      "choice_letters": 388,
+      "choice_numbers": 388,
+      "choice_shuffled": 388,
+      "binary_ovr": 1552
+    },
+    "license": "MIT",
+    "source": "https://huggingface.co/datasets/stanfordmimi/MedVAL-Bench",
+    "source_snapshot": {
+      "repo": "stanfordmimi/MedVAL-Bench",
+      "revision": "90d897e23da4f02ac887f08d1765cd1641540316"
+    },
+    "label_origin": "Physician-assigned risk grade for source/target medical-text pair."
+  },
+  {
+    "dataset": "rxsafe",
+    "category": "C",
+    "domain": "Safety Review",
+    "parents": 915,
+    "classes": 3,
+    "input_evidence": "Medication/ingredient substitution in medical text",
+    "classification_target": "Three source-defined safety grades",
+    "public": true,
+    "withheld_reason": null,
+    "requests": 5490,
+    "variants": {
+      "choice_letters": 915,
+      "choice_numbers": 915,
+      "choice_shuffled": 915,
+      "binary_ovr": 2745
+    },
+    "license": "CC0-1.0",
+    "source": "https://github.com/CAS-SIAT-XinHai/RxSafeBench",
+    "source_snapshot": {
+      "revision": "a25f9a1f173cf034b678c60f051901e86fbbbbb2"
+    },
+    "label_origin": "Source substitution-safety annotation, retaining source limitations."
+  },
+  {
+    "dataset": "ctg_uci21",
+    "category": "D",
+    "domain": "Physiological Assessment",
+    "parents": 1000,
+    "classes": 3,
+    "input_evidence": "All 21 native CTG numerical features",
+    "classification_target": "Normal / suspicious / pathological",
+    "public": true,
+    "withheld_reason": null,
+    "requests": 6000,
+    "variants": {
+      "choice_letters": 1000,
+      "choice_numbers": 1000,
+      "choice_shuffled": 1000,
+      "binary_ovr": 3000
+    },
+    "license": "CC-BY-4.0",
+    "source": "https://archive.ics.uci.edu/dataset/193/cardiotocography",
+    "label_origin": "Original UCI NSP fetal-state annotation, with all 21 numerical predictors."
+  },
+  {
+    "dataset": "vitaldb_map",
+    "category": "D",
+    "domain": "Physiological Assessment",
+    "parents": 334,
+    "classes": 2,
+    "input_evidence": "Time-indexed haemodynamic observations",
+    "classification_target": "Future MAP event / no event",
+    "public": false,
+    "withheld_reason": "License/DUA ambiguity: provider consent is needed before redistribution",
+    "requests": 1670,
+    "variants": {
+      "choice_letters": 334,
+      "choice_numbers": 334,
+      "choice_shuffled": 334,
+      "binary_ovr": 668
+    },
+    "label_origin": "Deterministic event label from the specified future arterial MAP observation window."
+  }
+]

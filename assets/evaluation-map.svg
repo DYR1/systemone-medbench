@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">Four complementary views of medical decision reliability</title>
+  <desc id="desc">Original task performance; relabeling, reordering and option-wise binary scoring; correct-answer replacement and optional abstention; and probability-based selection with thresholds and fixed global coverage.</desc>
+  <rect width="1200" height="660" rx="18" fill="#f7f9fc"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="36" y="51" fill="#172f42" font-size="29" font-weight="700">One benchmark. Four perspectives.</text>
+    <text x="36" y="84" fill="#5c7082" font-size="18">Fixed evidence · Separate references · Aligned candidate identities</text>
+    <rect x="36" y="114" width="552" height="236" rx="16" fill="white" stroke="#d8e2ed"/>
+    <rect x="612" y="114" width="552" height="236" rx="16" fill="white" stroke="#d8e2ed"/>
+    <rect x="36" y="374" width="552" height="236" rx="16" fill="white" stroke="#d8e2ed"/>
+    <rect x="612" y="374" width="552" height="236" rx="16" fill="white" stroke="#d8e2ed"/>
+    <g font-size="16" font-weight="700">
+      <rect x="62" y="139" width="38" height="30" rx="8" fill="#e5f5ef"/><text x="72" y="160" fill="#16785d">01</text>
+      <rect x="638" y="139" width="38" height="30" rx="8" fill="#eaf0fc"/><text x="648" y="160" fill="#3d65b1">02</text>
+      <rect x="62" y="399" width="38" height="30" rx="8" fill="#fff0e2"/><text x="72" y="420" fill="#a56420">03</text>
+      <rect x="638" y="399" width="38" height="30" rx="8" fill="#eeeafd"/><text x="648" y="420" fill="#7155ac">04</text>
+    </g>
+    <g fill="#183345" font-size="25" font-weight="700">
+      <text x="114" y="162">Overall performance</text><text x="690" y="162">Format robustness</text>
+      <text x="114" y="422">Abstention awareness</text><text x="690" y="422">Probability-based reliability</text>
+    </g>
+    <g fill="#52697b" font-size="19">
+      <text x="62" y="206">How accurate are the decisions?</text>
+      <text x="638" y="206">Do decisions survive format changes?</text>
+      <text x="62" y="466">Can models recognize answer boundaries?</text>
+      <text x="638" y="466">Can scores select more reliable answers?</text>
+    </g>
+    <g fill="#213d50" font-size="20">
+      <text x="62" y="252">Original Choice → Accuracy + macro-F1</text>
+      <text x="638" y="252">A / B → 1 / 2 · Reorder · Choice → OBS</text>
+      <text x="62" y="512">Replace the correct answer → NONE</text>
+      <text x="62" y="544">Add ABSTAIN → Withhold a decision</text>
+      <text x="638" y="512">Choice vs normalized binary scores</text>
+      <text x="638" y="544">Thresholds 0.70–0.90 · Global top 5–25%</text>
+    </g>
+    <g fill="#728494" font-size="17">
+      <text x="62" y="310">Compare datasets, task families and models.</text>
+      <text x="638" y="310">Track accuracy changes and decision reversals.</text>
+      <text x="62" y="579">Compare matched controls and retained accuracy.</text>
+      <text x="638" y="579">Measure retained accuracy alongside coverage.</text>
+    </g>
+    <text x="600" y="640" text-anchor="middle" fill="#6b7d8a" font-size="16">Research evaluation, not a medical deployment or safety certification.</text>
+  </g>
+</svg>

@@ -1,0 +1,1172 @@
+{
+  "scope": "paper_15_datasets_8742_B_only_boundaries",
+  "parents": 8742,
+  "requests": 65252,
+  "frozen_manifest_sha256": "0a8fee5cecb3b7b35f4f5c58e74f5f6d2cff1dc367f39d86af2a5d72723808e8",
+  "datasets": [
+    {
+      "dataset": "care_bench",
+      "category": "A_triage_navigation",
+      "subcategory": "A3 咨询动作",
+      "primary_metric": "accuracy_and_macro_f1",
+      "source_task_type": "single_choice",
+      "path": "A_triage_navigation/care_bench",
+      "count": 135,
+      "eligible_parent_count": 135,
+      "canonical_gold_sha256": "54926a833738db9b547ceee68db3e841c846b33df9643a7b8ba23d2ac986e71e",
+      "label": "CARE-Bench",
+      "classes": 4,
+      "task_summary": "咨询对话前缀 → 当前咨询/分诊动作",
+      "answers_file_sha256": "54926a833738db9b547ceee68db3e841c846b33df9643a7b8ba23d2ac986e71e",
+      "variants": [
+        {
+          "variant": "choice_letters",
+          "parent_case_count": 135,
+          "request_count": 135,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 3152,
+          "file_sha256": {
+            "jev_requests.jsonl": "5a198c668f46541d6d52e8f58f712eb97f70b28a1ef00be15a6b6f5e826166fa",
+            "answers.jsonl": "54926a833738db9b547ceee68db3e841c846b33df9643a7b8ba23d2ac986e71e",
+            "mappings.jsonl": "27ae96c3b31f7aaaf530f9d63590040630ef7084291b39005adc858f69c75504"
+          }
+        },
+        {
+          "variant": "choice_numbers",
+          "parent_case_count": 135,
+          "request_count": 135,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 3168,
+          "file_sha256": {
+            "jev_requests.jsonl": "e598dfec988bbeb2ad30d3a88abb7cd06e1d983d3e93b7b7c144b3ac3fa39c44",
+            "answers.jsonl": "626dc96c339c2d05f88fcff3b2b020177211df658ff4387b0c101d072ed44455",
+            "mappings.jsonl": "2deafae53256ec3973fc18b4c4dd38f1eb6f79719b0b26c596fea3e0071c8bc1"
+          }
+        },
+        {
+          "variant": "choice_shuffled",
+          "parent_case_count": 135,
+          "request_count": 135,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 3152,
+          "file_sha256": {
+            "jev_requests.jsonl": "76e08558bc4fb6cc6ea08be5a2d4a0b2def62a43c97c288106449bee3553989c",
+            "answers.jsonl": "8c35ab31ff2f68877ac493820ef752018174854dca1e202b33cb1afb712f7e0f",
+            "mappings.jsonl": "7d1226f367762e6ac04ea5770f6cfd275d9268f929319a3b6b2c1d22821622e2"
+          }
+        },
+        {
+          "variant": "binary_ovr",
+          "parent_case_count": 135,
+          "request_count": 540,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 3618,
+          "file_sha256": {
+            "jev_requests.jsonl": "9e85e92b11e3468a9c2c591e0144bed2edd322b8e82823b674858f5aa70f747a",
+            "answers.jsonl": "afad7e5dde611e99c5e516c96a8645e64ce8b7df38429d75e2d1a1c254768bfd",
+            "mappings.jsonl": "b3c153833ca5e8edb7e7b4bb1a9315523047e6d20c9a42f4af36c90f5ca6b3c8"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "esi_multisource_extended",
+      "category": "A_triage_navigation",
+      "subcategory": "A1 急诊优先级",
+      "primary_metric": "accuracy_and_macro_f1",
+      "source_task_type": "single_choice",
+      "path": "A_triage_navigation/esi_multisource_extended",
+      "count": 1000,
+      "eligible_parent_count": 1000,
+      "canonical_gold_sha256": "41b20152b5b2b494f82cc7368e2229527442517f4ae7734474584ac2e35a3104",
+      "label": "ESI测试（MIMIC-IV + TriageAgent）",
+      "classes": 5,
+      "task_summary": "931条分诊记录＋69条作者情景 → ESI等级",
+      "answers_file_sha256": "41b20152b5b2b494f82cc7368e2229527442517f4ae7734474584ac2e35a3104",
+      "variants": [
+        {
+          "variant": "choice_letters",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 6905,
+          "file_sha256": {
+            "jev_requests.jsonl": "e9d7c176c023c9433e3ecd812d47a0da4af756bfab32a3e4fff717c735eb4b92",
+            "answers.jsonl": "41b20152b5b2b494f82cc7368e2229527442517f4ae7734474584ac2e35a3104",
+            "mappings.jsonl": "05dcf515627118724d6793e8f2b70e1d4a5207973b0c6dd9a8ab4213ac735d6b"
+          }
+        },
+        {
+          "variant": "choice_numbers",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 6905,
+          "file_sha256": {
+            "jev_requests.jsonl": "7a89fd55f1a73e0c712c162695c8f012341677fc29684a4de54dfa0fc2e0ad9a",
+            "answers.jsonl": "949f62be21f7040aea5f50b644d24d6d196d4b19eec0223d3b246e10502a1be5",
+            "mappings.jsonl": "a740c04ff36734963dfa0e9616262033daac3809b8f539f0a29f0a162cefc196"
+          }
+        },
+        {
+          "variant": "choice_shuffled",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 6905,
+          "file_sha256": {
+            "jev_requests.jsonl": "bdec676f7a93d0cfc5eb08c7f7418948fd4cc0b7f0b58dbad5b555e2310be456",
+            "answers.jsonl": "1dcefabeea0512c1f6039d11361a46f82f5ac7fe262363f9ba3205359c9f5fb8",
+            "mappings.jsonl": "16c7c4a60ad59e7ff5c38d038ce3daddb2d2f4e1b598e634cc70b9efae6938c7"
+          }
+        },
+        {
+          "variant": "binary_ovr",
+          "parent_case_count": 1000,
+          "request_count": 5000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 7151,
+          "file_sha256": {
+            "jev_requests.jsonl": "058f2f242a1c78e628635aa0aebb9e682fb1fdf47d52c0a4332ccef92cc190c7",
+            "answers.jsonl": "df99c9c7b4fd2c62d40d4a220531df64aec9c7905c1aed172ee351ce1d2609f1",
+            "mappings.jsonl": "a4fb0f8cd35abce7601e3904aa5dde579036081c28c4f7b1b216dcb21dc3512f"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "mimic_iv_ed",
+      "category": "A_triage_navigation",
+      "subcategory": "A1 急诊优先级",
+      "primary_metric": "accuracy_and_macro_f1",
+      "source_task_type": "single_choice",
+      "path": "A_triage_navigation/mimic_iv_ed",
+      "count": 1000,
+      "eligible_parent_count": 1000,
+      "canonical_gold_sha256": "c29350c7b80fbdb19abbc08cb49c4eefa5173370a64b27cee88604d79bcf502d",
+      "label": "MIMIC-IV-ED（独立对照）",
+      "classes": 5,
+      "task_summary": "结构化分诊记录 → 原护士 ESI 标签",
+      "answers_file_sha256": "c29350c7b80fbdb19abbc08cb49c4eefa5173370a64b27cee88604d79bcf502d",
+      "variants": [
+        {
+          "variant": "choice_letters",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 6906,
+          "file_sha256": {
+            "jev_requests.jsonl": "5d03970857121227181f19074e180a417e6da9a12b4e3cda4532cac2f9f74180",
+            "answers.jsonl": "c29350c7b80fbdb19abbc08cb49c4eefa5173370a64b27cee88604d79bcf502d",
+            "mappings.jsonl": "aed1f76f3a6d757b8bcc8b93d9f087470834a9459ecf245908ca856bbddebbc9"
+          }
+        },
+        {
+          "variant": "choice_numbers",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 6906,
+          "file_sha256": {
+            "jev_requests.jsonl": "b714437cbea89addfa998278a0720ee1dcf6421ee57b0ea6c724525e3658294f",
+            "answers.jsonl": "fe1c1c55c18cb9e3bd5a936252cc5b7d2e7263ba23f62e416c186d2b0333f825",
+            "mappings.jsonl": "7582155a1697f05ed20fa0f579165b0a171c67f11528463ed460a01001e7b09e"
+          }
+        },
+        {
+          "variant": "choice_shuffled",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 6906,
+          "file_sha256": {
+            "jev_requests.jsonl": "e171eee917b4e99e57a3df39a6e08c36ad3af68986057c370e947839b61f8b41",
+            "answers.jsonl": "dc2d754e6bb779fe4e29e11563e62670ff2e86438ba9dd2665447a0bcd9a6070",
+            "mappings.jsonl": "25c5e7d064ed5cc392fc4bbe35c8206789c6d2aee7ea73133ecc26736d434c2a"
+          }
+        },
+        {
+          "variant": "binary_ovr",
+          "parent_case_count": 1000,
+          "request_count": 5000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 7152,
+          "file_sha256": {
+            "jev_requests.jsonl": "3daf81532fc124acbdf2b4b9381615b9559b7d61e748502989a97ecf955495a3",
+            "answers.jsonl": "7a7c80b84adceb8410c203b5d1e2236c314976f71cc6a2ce7da31cd0c17d1f76",
+            "mappings.jsonl": "2d1364f672f20463bddbeb623d6d9b8bec9b367aac2b774938981376c54a5768"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ramaswamy_triage",
+      "category": "A_triage_navigation",
+      "subcategory": "A2 就医紧急度",
+      "primary_metric": "acceptable_label_accuracy",
+      "source_task_type": "single_choice",
+      "path": "A_triage_navigation/ramaswamy_triage",
+      "count": 960,
+      "eligible_parent_count": 960,
+      "canonical_gold_sha256": "28ae094f00cc29e96990c98faad847190911a0e9e7142de42e4d3283aa94be9b",
+      "label": "Ramaswamy 分诊",
+      "classes": 4,
+      "task_summary": "求助文本 → 就医去向；部分题有多个可接受答案",
+      "answers_file_sha256": "28ae094f00cc29e96990c98faad847190911a0e9e7142de42e4d3283aa94be9b",
+      "variants": [
+        {
+          "variant": "choice_letters",
+          "parent_case_count": 960,
+          "request_count": 960,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 4616,
+          "file_sha256": {
+            "jev_requests.jsonl": "4e562b324eda4f46dcf62174ba94fda6f1f973d343eabe669c69613bd7060265",
+            "answers.jsonl": "28ae094f00cc29e96990c98faad847190911a0e9e7142de42e4d3283aa94be9b",
+            "mappings.jsonl": "245ca27d4f8ad79097c5f23575373a554d0b86f95d5f5bf03fa736cf82aee96a"
+          }
+        },
+        {
+          "variant": "choice_numbers",
+          "parent_case_count": 960,
+          "request_count": 960,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 4616,
+          "file_sha256": {
+            "jev_requests.jsonl": "ae175e807ba154cfc15bc51903b6861d7626b5ef79df5d284be1c33aa9da62ff",
+            "answers.jsonl": "24b992dfafe55b6560fd3e83952fbb73054204861e7eaf12aa0b19aa697eece3",
+            "mappings.jsonl": "38ee4e6df473127784e1ad5590b64620f86c92cf51cbbc8a84b28c5a10d39aae"
+          }
+        },
+        {
+          "variant": "choice_shuffled",
+          "parent_case_count": 960,
+          "request_count": 960,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 4616,
+          "file_sha256": {
+            "jev_requests.jsonl": "621b08dc155b5defbba1e56e1084f8d7d0ce6b14801940530871da1078611fde",
+            "answers.jsonl": "9504a72d68fb4d961ddaa36e8811e3220b28c644e6d7d08df1a729d8037d9e11",
+            "mappings.jsonl": "b64efc7fc1e929db1535111d16146bda4bff520191367749295608220f42f108"
+          }
+        },
+        {
+          "variant": "binary_ovr",
+          "parent_case_count": 960,
+          "request_count": 3840,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 4916,
+          "file_sha256": {
+            "jev_requests.jsonl": "972d0f8da5e302167c4d1d4297ccc99c0fe9c9e6456c0659267b4fd4b81f9e65",
+            "answers.jsonl": "8da51c0e2ecd6da3fa5ae08b45d4d31b40d5cca4b60e90d1ab8dc0c41b790e90",
+            "mappings.jsonl": "2f514f0054a43b3b9f9c0ee9e88296334b46a237d877a7061b095e6bd1cd613f"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "clibench_diagnosis_derived",
+      "category": "B_reasoning_rules",
+      "subcategory": "B1 诊断推断",
+      "primary_metric": "accuracy_and_macro_f1",
+      "source_task_type": "single_choice",
+      "path": "B_reasoning_rules/clibench_diagnosis_derived",
+      "count": 1000,
+      "eligible_parent_count": 1000,
+      "canonical_gold_sha256": "d7f563a45e339aa0c0c7b9b6db0eb4b20fea9a3d92c3b9d2dca53f93b65c52e2",
+      "label": "CliBench命名的编码派生任务（非官方）",
+      "classes": 4,
+      "task_summary": "病历片段 → 首位ICD类别代理标签",
+      "answers_file_sha256": "d7f563a45e339aa0c0c7b9b6db0eb4b20fea9a3d92c3b9d2dca53f93b65c52e2",
+      "variants": [
+        {
+          "variant": "choice_letters",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 9336,
+          "file_sha256": {
+            "jev_requests.jsonl": "85a94525dbbd54f79ce683ab99ef1566c344a159f050b5864bedb21915577a0a",
+            "answers.jsonl": "d7f563a45e339aa0c0c7b9b6db0eb4b20fea9a3d92c3b9d2dca53f93b65c52e2",
+            "mappings.jsonl": "b41cef7e91d7102456c56b60f07279e88d0191b8bb7e678b46badc128281cca2"
+          }
+        },
+        {
+          "variant": "choice_numbers",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 9336,
+          "file_sha256": {
+            "jev_requests.jsonl": "a4d85fb585665bcc2662cf2f202b90d23597ed27f695b5bdc244ec3a018a2394",
+            "answers.jsonl": "540edeacd119fa86101bc560fd646fab43c714674768ec0895e6a19828d20884",
+            "mappings.jsonl": "e84fa6e25307e78de2ec213c5d69c0c9d5e68d7303650a638fd2dce0ec0e4806"
+          }
+        },
+        {
+          "variant": "choice_shuffled",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 9336,
+          "file_sha256": {
+            "jev_requests.jsonl": "4c92b85881165600440bf1bf6392e01f16232eefbff1be431662a7dc3d70d267",
+            "answers.jsonl": "9dbc6f011bb3e2e140fb51715a05667a4379c9ffff174af3fe29ef9988df9328",
+            "mappings.jsonl": "4ac0904266a8077b63e612ac1ac785e796d3a7421063d021be27b9d0a2a83a5e"
+          }
+        },
+        {
+          "variant": "binary_ovr",
+          "parent_case_count": 1000,
+          "request_count": 4000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 9500,
+          "file_sha256": {
+            "jev_requests.jsonl": "b7a2cee5ea3823136aa08b105a90b77526997ad035ae5c801d0cf55989bd1bbc",
+            "answers.jsonl": "c88746fbd25a7fb209d3ceb46655e400897c4bc80d4824db7930873e4f7da493",
+            "mappings.jsonl": "af13b3822a5f51e1fff849daceadcfd04a1e34b3c9a40b1cbf80fb01be4ae65c"
+          }
+        },
+        {
+          "variant": "choice_none",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 10587,
+          "file_sha256": {
+            "jev_requests.jsonl": "7ff26aeed0170ba37e08b8a0328c34a37da741515acd4dd759fc63f784a184a9",
+            "answers.jsonl": "bb8d29aee7b3ba4a241e4506c97dbc4b6d344f6ad061bf8fb044b96cc651a26b",
+            "mappings.jsonl": "e8fe1712c3efceb54db3c42010e206605596759b87d1b6687dafc609ca74af25"
+          }
+        },
+        {
+          "variant": "choice_abstain",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 12383,
+          "file_sha256": {
+            "jev_requests.jsonl": "3cb4b6aed82788ea9a5349630fd72b43af41ffb4cb318278c48223b57b15017c",
+            "answers.jsonl": "20769c40bd3d87085d1aa87b6d01f48e3d58d3cb2dd7fe2e20499e52ec86a5ba",
+            "mappings.jsonl": "01ecbfc0b58a8fef27c3ffb09c1ad903b124aff252471724b43afc800990ac81"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "medcalc_acute_assessment",
+      "category": "B_reasoning_rules",
+      "subcategory": "B4 临床评分规则应用",
+      "primary_metric": "accuracy_and_macro_f1",
+      "source_task_type": "binary",
+      "path": "B_reasoning_rules/medcalc_acute_assessment",
+      "count": 41,
+      "eligible_parent_count": 41,
+      "canonical_gold_sha256": "e7c559964d0298d999c97c5580c15c966151f9ecbe0c3c289995623fd6762b6e",
+      "label": "MedCalc 急性评估",
+      "classes": 2,
+      "task_summary": "病例＋评分规则 → GCS/MAP/SIRS阈值判断",
+      "answers_file_sha256": "e7c559964d0298d999c97c5580c15c966151f9ecbe0c3c289995623fd6762b6e",
+      "variants": [
+        {
+          "variant": "choice_letters",
+          "parent_case_count": 41,
+          "request_count": 41,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 9499,
+          "file_sha256": {
+            "jev_requests.jsonl": "d416aa5cea497da58928860bf44d965f4e6b1477bf59c23c9c962a36cfab04cf",
+            "answers.jsonl": "e7c559964d0298d999c97c5580c15c966151f9ecbe0c3c289995623fd6762b6e",
+            "mappings.jsonl": "440521e38eae026dde6aa7f36839c24b16a93a56118273a7c0e2f0f0b19f4c82"
+          }
+        },
+        {
+          "variant": "choice_numbers",
+          "parent_case_count": 41,
+          "request_count": 41,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 9499,
+          "file_sha256": {
+            "jev_requests.jsonl": "e0d5e41b4df1f60fcb0994b97f0dd22dc40316934c6902c46e40bc4051559e92",
+            "answers.jsonl": "25c950cc64bc1260e69e178195da63a2128863e77af79a7eae7bd6a2aab6557d",
+            "mappings.jsonl": "c1ce148c9a06412ea84077f860661e668d4f8366e8db1a769f4be64e516b0a5e"
+          }
+        },
+        {
+          "variant": "choice_shuffled",
+          "parent_case_count": 41,
+          "request_count": 41,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 9499,
+          "file_sha256": {
+            "jev_requests.jsonl": "d451006780987d730853808686c1b69c2de48a36b0f805a275280f769fa3436a",
+            "answers.jsonl": "5aa9c353d5c4d826d762aec627d23bb8ce23b54f2ad3e8f05a397e669f1091cc",
+            "mappings.jsonl": "8d2c69a5528b8bc57d0b505199f5c4cd25cf53246504e538b453d8c167be8e5b"
+          }
+        },
+        {
+          "variant": "binary_ovr",
+          "parent_case_count": 41,
+          "request_count": 82,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 9850,
+          "file_sha256": {
+            "jev_requests.jsonl": "3c32b841fa51957105cd73bda896a7149c5ae48d08f14e94945b66f47002ca57",
+            "answers.jsonl": "af49483cbb5582950983eb4ceef04632487906f65c33b38b2d8c013cf8b193d0",
+            "mappings.jsonl": "12019adb27d0d080b998b6cccc6abf9673470737073aa82d6e49841aab14fb43"
+          }
+        },
+        {
+          "variant": "choice_abstain",
+          "parent_case_count": 41,
+          "request_count": 41,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 12546,
+          "file_sha256": {
+            "jev_requests.jsonl": "963f4a7104230f2dab48fb9a2fa983aa9a4d787549cf3f2920fe29a941c1590d",
+            "answers.jsonl": "fb892d91bb4cb15acc922d2ec43c6ab09d2aae35b04dad11eaff46766e3632a2",
+            "mappings.jsonl": "7e49d5436d05004e29221d17abbb3d2f82aafc2c90a20001ab85825fde3aed7b"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "medqa_decision",
+      "label": "MedQA 临床决策子集",
+      "category": "B_reasoning_rules",
+      "path": "B_reasoning_rules/medqa_decision",
+      "count": 252,
+      "source_count": 1273,
+      "classes": 4,
+      "primary_metric": "accuracy",
+      "source_task_type": "single_choice",
+      "class_counts": {
+        "B": 60,
+        "D": 45,
+        "A": 84,
+        "C": 63
+      },
+      "source_family_counts": {
+        "MedQA_USMLE_4options": 252
+      },
+      "canonical_gold_sha256": "707ab0f43c9d09ad5810d3369797bdcfd4534d7a95474f49b9237fa1b58b5f3c",
+      "task_summary": "完整原题与候选 → 治疗、管理或检查选择",
+      "answers_file_sha256": "707ab0f43c9d09ad5810d3369797bdcfd4534d7a95474f49b9237fa1b58b5f3c",
+      "variants": [
+        {
+          "variant": "choice_letters",
+          "parent_case_count": 252,
+          "request_count": 252,
+          "over_local_guard": 0,
+          "file_sha256": {
+            "jev_requests.jsonl": "8aa7642ab6bcb9596606a2323c9b7069a7ff2667d20a62bc0b9182abdeb3c0fa",
+            "answers.jsonl": "5e9cddb071d0fff8d221b8172260100e41d09ffbf81115d17ba8190f2017b586",
+            "mappings.jsonl": "3c43b7583ab42a098ad97b6d8210c46b356897424c6bfd7b14902c92bcb82604"
+          }
+        },
+        {
+          "variant": "choice_numbers",
+          "parent_case_count": 252,
+          "request_count": 252,
+          "over_local_guard": 0,
+          "file_sha256": {
+            "jev_requests.jsonl": "2f7accbca6a2b5043fb582d28b7d86596be66e3b338fb909c37cf2f4d2187ef6",
+            "answers.jsonl": "99853b487e05b74d28e21241c3901d894ed733dd3944d705bda083387b01b6c1",
+            "mappings.jsonl": "dbc7c7f0680905a6dda8bd75512c60e4ad48fe0f9c6620aeb3b0608e898465e2"
+          }
+        },
+        {
+          "variant": "choice_shuffled",
+          "parent_case_count": 252,
+          "request_count": 252,
+          "over_local_guard": 0,
+          "file_sha256": {
+            "jev_requests.jsonl": "2fda90cdb32d7fdfc234af9a64a40d25af3ded0e57d801af28d31ae7ca4830e9",
+            "answers.jsonl": "0642915dac8029f19b0a71eb0db7f3fd2aee945e80d66b15a609d7d133f3aaa3",
+            "mappings.jsonl": "3021cbba2f328e555accbf21a6b3a25af2ac83a0f1ac3e258a84ed7bc947f9ff"
+          }
+        },
+        {
+          "variant": "binary_ovr",
+          "parent_case_count": 252,
+          "request_count": 1008,
+          "over_local_guard": 0,
+          "file_sha256": {
+            "jev_requests.jsonl": "a69332f32268e64a9f89db834843ccb72fc6d667b219e30d422cd8e3665b6f25",
+            "answers.jsonl": "cdbb06c7cbd7480ab80d0cfed8adf8e6afc07ac6b54de3a45bf14eea3158b745",
+            "mappings.jsonl": "5f87efe21b88adeea6ddc6e820d8713e64ff707daa2238bc909acc3f069735c1"
+          }
+        },
+        {
+          "variant": "choice_none",
+          "parent_case_count": 252,
+          "request_count": 252,
+          "over_local_guard": 0,
+          "file_sha256": {
+            "jev_requests.jsonl": "82d5582d0bb8c78f4b7ff6cb17529de3e1f6c6b5aec6f25348a4f911a989c9e5",
+            "answers.jsonl": "5e9cddb071d0fff8d221b8172260100e41d09ffbf81115d17ba8190f2017b586",
+            "mappings.jsonl": "6ec3d1e985caa84c761cb31c787de9e55906dd50b293e2c032e8741b112969e2"
+          }
+        },
+        {
+          "variant": "choice_abstain",
+          "parent_case_count": 252,
+          "request_count": 252,
+          "over_local_guard": 0,
+          "file_sha256": {
+            "jev_requests.jsonl": "96fff6ead0c269994b566c31c3f33b377fe692dd4b5b3f06ab2f9caf3df3871e",
+            "answers.jsonl": "800f19a0cc2891ca5eec10dd78ffe2d42ce17f16a30543c4aeeff09af2f9076a",
+            "mappings.jsonl": "363ae92f722f493b6da9fd4233849a87b0fdceb22e640bdde9cecec8da162016"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "medxpertqa_acute",
+      "category": "B_reasoning_rules",
+      "subcategory": "B3 诊疗方案选择",
+      "primary_metric": "accuracy_and_macro_f1",
+      "source_task_type": "single_choice",
+      "path": "B_reasoning_rules/medxpertqa_acute",
+      "count": 130,
+      "eligible_parent_count": 130,
+      "canonical_gold_sha256": "ba7b52523c63542fa10f67a444472ddec8843622c93fcdf1521e5e2e09f0d588",
+      "label": "MedXpertQA 急性场景",
+      "classes": 10,
+      "task_summary": "原生文字题 → 诊疗判断",
+      "answers_file_sha256": "ba7b52523c63542fa10f67a444472ddec8843622c93fcdf1521e5e2e09f0d588",
+      "variants": [
+        {
+          "variant": "choice_letters",
+          "parent_case_count": 130,
+          "request_count": 130,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 6945,
+          "file_sha256": {
+            "jev_requests.jsonl": "efba854cbcb82f79699426c377b6348bbaface794f75e55d1e61a0b331888250",
+            "answers.jsonl": "ba7b52523c63542fa10f67a444472ddec8843622c93fcdf1521e5e2e09f0d588",
+            "mappings.jsonl": "e2fbd54aed9e076ba48085a967883db49b2e98b632270e8c1796c645870f0f2d"
+          }
+        },
+        {
+          "variant": "choice_numbers",
+          "parent_case_count": 130,
+          "request_count": 130,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 6989,
+          "file_sha256": {
+            "jev_requests.jsonl": "f73237a8633eebe4beb54d97eb90a833fe9d3c9c8269bccad927ab241933cad1",
+            "answers.jsonl": "dedf0b791fa833c5b541ea93f89681a8411858f022657aaf3293483e5a25b394",
+            "mappings.jsonl": "02e5032a699533fcfbed25910e3eac3c639d4ae5403db3123ee59f7827fab127"
+          }
+        },
+        {
+          "variant": "choice_shuffled",
+          "parent_case_count": 130,
+          "request_count": 130,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 6945,
+          "file_sha256": {
+            "jev_requests.jsonl": "6b28fa65192ecb221669ce9a331935e6e01cabef6d07eb4a3d55515174b76083",
+            "answers.jsonl": "0cf9fcfc5693fca5ad4415738dce5a2bd407302ddfc75276a6f267e9e995fcfe",
+            "mappings.jsonl": "7a7d7a23718bf4a027e5de087da990cef67dee611c16e0a465372f53dd992d68"
+          }
+        },
+        {
+          "variant": "binary_ovr",
+          "parent_case_count": 130,
+          "request_count": 1300,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 6789,
+          "file_sha256": {
+            "jev_requests.jsonl": "c6e8da40b9e5527c75213736ca758b0d4cb0523f79aa055fa39a39f93b3b981d",
+            "answers.jsonl": "850c79c6a5a3cbad3cb8739195994d7b425f191c90f8d73f91a09956ded87120",
+            "mappings.jsonl": "11477dc1c6996db8d1b8e20e9b0681f9cc3ee8c3fe01592e471451a1179ced0e"
+          }
+        },
+        {
+          "variant": "choice_none",
+          "parent_case_count": 130,
+          "request_count": 130,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 8286,
+          "file_sha256": {
+            "jev_requests.jsonl": "f1b813cb30aa10adce887edee63b61fcae99a5880700fa0f208c5e6328eaf46a",
+            "answers.jsonl": "5548cba2e2ec5be015d6f05d9250bfd88b249b98f246acab4d989481997a4c21",
+            "mappings.jsonl": "4e1c5e02894f2a7aac6df321c4e1eff93b55be420aae1c538d2154f5e9631742"
+          }
+        },
+        {
+          "variant": "choice_abstain",
+          "parent_case_count": 130,
+          "request_count": 130,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 9992,
+          "file_sha256": {
+            "jev_requests.jsonl": "640e51efb9c37c4c0993d0f437108a760584e2934b570eddc2fd00637ca41178",
+            "answers.jsonl": "969e6ff1b9cc407a67588038be966aaae49864b0fa8da128d78ab5b079327088",
+            "mappings.jsonl": "3b9710e8515f2a42818c09c3ed8a245d456ef68bc91d67354526e7462ef355ae"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "mimic_cdm",
+      "category": "B_reasoning_rules",
+      "subcategory": "B1 诊断推断",
+      "primary_metric": "accuracy_and_macro_f1",
+      "source_task_type": "single_choice",
+      "path": "B_reasoning_rules/mimic_cdm",
+      "count": 1000,
+      "eligible_parent_count": 1000,
+      "canonical_gold_sha256": "c32a913f15d428c1f0332e5d77f361e4ebdfcb886fc5f4bc573e83c1afe93a6c",
+      "label": "MIMIC-CDM 静态派生",
+      "classes": 4,
+      "task_summary": "病史、查体、检验、影像报告文本 → 诊断",
+      "answers_file_sha256": "c32a913f15d428c1f0332e5d77f361e4ebdfcb886fc5f4bc573e83c1afe93a6c",
+      "variants": [
+        {
+          "variant": "choice_letters",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 32,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 31057,
+          "file_sha256": {
+            "jev_requests.jsonl": "a8425f73698bdaec18ad83fede89abe2e67061d40f0eebf48e583ff02d7f9e45",
+            "answers.jsonl": "c32a913f15d428c1f0332e5d77f361e4ebdfcb886fc5f4bc573e83c1afe93a6c",
+            "mappings.jsonl": "c90ca88fa7f2a5d7b06f16ac0b261830a1895d9811dabbc2ccf8ff28af710bf5"
+          }
+        },
+        {
+          "variant": "choice_numbers",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 32,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 31057,
+          "file_sha256": {
+            "jev_requests.jsonl": "8fa646a1ae119f0ffc1f54dd43df357d3521b95d7ef6f4cfbae39e3f612540b5",
+            "answers.jsonl": "cb181bee10e91fa49f5de08c25426aaf5e57e637d218efa1b171df5ad2c4504c",
+            "mappings.jsonl": "e9b607b92d202670428f9430fc000d9e5caca8fcefb6650089af1f6e4604e840"
+          }
+        },
+        {
+          "variant": "choice_shuffled",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 32,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 31057,
+          "file_sha256": {
+            "jev_requests.jsonl": "c923e19c0daf96ee19fb2f0ce36961760c2dc9ec2d367e955db1c30e57ea6de2",
+            "answers.jsonl": "b716f3144663ab8656c09827ea1bfac969f9933553eef77f7d4492743b92e760",
+            "mappings.jsonl": "dbea7ce9fe6f5197875fced393546f6b87f822b57c488edb155002ac25c600fe"
+          }
+        },
+        {
+          "variant": "binary_ovr",
+          "parent_case_count": 1000,
+          "request_count": 4000,
+          "over_local_guard": 133,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 31482,
+          "file_sha256": {
+            "jev_requests.jsonl": "bfdd8f2438670e50d1cd1bc5d41579f2b6cd6a1a13eeaa1a72232d692a8dc1e3",
+            "answers.jsonl": "f32592d925f0655983bef56db84e21baaa356f818f18607bd086b63b851addf9",
+            "mappings.jsonl": "7ff3cfeca9f6373efd1f61780055dfe885a8c4849a2fca289725f4b5111de150"
+          }
+        },
+        {
+          "variant": "choice_none",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 48,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 32586,
+          "file_sha256": {
+            "jev_requests.jsonl": "60612df19bce8fca64baa0fcaac5e4ce3bb132de1bb7d22db1a3a25883d039ed",
+            "answers.jsonl": "9f27c28fe1a7f70b369e7421767bd411185eaf7e849bb535945961731b9fc827",
+            "mappings.jsonl": "f7ac2ed4dfbe563d8f315fc13c452ee9e16897d063b8d7ebd37e51ea6baf07f0"
+          }
+        },
+        {
+          "variant": "choice_abstain",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 75,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 34104,
+          "file_sha256": {
+            "jev_requests.jsonl": "49424efc00b285777e1f1a6ac33693d6e3de268fe693aa94d0ef481603939aac",
+            "answers.jsonl": "dcdbf96491b126950cfb8a8ce61381dc8d158443b47078d6fe8b8da7dc89927a",
+            "mappings.jsonl": "2fc521c421dada6ed46eb4f2d1268ce2ebf79a31c4f347f1d220c216c44c7c76"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "sct_acute",
+      "category": "B_reasoning_rules",
+      "subcategory": "B2 证据更新",
+      "source_primary_metric": "mean_sct_score",
+      "primary_metric": "accepted_max_expert_score_accuracy_and_unique_reference_macro_f1",
+      "source_task_type": "single_choice",
+      "path": "B_reasoning_rules/sct_acute",
+      "count": 78,
+      "eligible_parent_count": 78,
+      "canonical_gold_sha256": "8bfcd66ee1e0bd62dabc0fa1661f2c9a57f4ff3c814ac9bb1c2d7a152839392e",
+      "label": "SCT 急性场景",
+      "classes": 5,
+      "task_summary": "情景、假设、新证据 → 五档证据更新；专家部分分",
+      "answers_file_sha256": "8bfcd66ee1e0bd62dabc0fa1661f2c9a57f4ff3c814ac9bb1c2d7a152839392e",
+      "variants": [
+        {
+          "variant": "choice_letters",
+          "parent_case_count": 78,
+          "request_count": 78,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 4105,
+          "file_sha256": {
+            "jev_requests.jsonl": "4730b616bb4c903508e30121a14a0ea189341fa93437b8aca01a1a95024c7c6c",
+            "answers.jsonl": "8bfcd66ee1e0bd62dabc0fa1661f2c9a57f4ff3c814ac9bb1c2d7a152839392e",
+            "mappings.jsonl": "554f38eeeb1d13c0bfc3d9b3c74e6fdfa00317fdc7b2b508947d8dd14863cf39"
+          }
+        },
+        {
+          "variant": "choice_numbers",
+          "parent_case_count": 78,
+          "request_count": 78,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 4125,
+          "file_sha256": {
+            "jev_requests.jsonl": "3880d8040afac8b7488eb64fc3cc997935ad95c17a1686fcae06532b70e2c46c",
+            "answers.jsonl": "8655e77bf616b73b6a4a277af38061b895836b0fc8830eb0e8d11fcf3c2b9ea3",
+            "mappings.jsonl": "fe5f5cdd5f42068bbf116a1ae36b40812b8f854837beda9135914e883011fa00"
+          }
+        },
+        {
+          "variant": "choice_shuffled",
+          "parent_case_count": 78,
+          "request_count": 78,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 4105,
+          "file_sha256": {
+            "jev_requests.jsonl": "804e818c08dd86a98d421c74c8f8457570186a92ed864f065c680eb71f64a771",
+            "answers.jsonl": "c92d012e6692d6d2e46f3b8d48cd4590eb784e574218b2c2cda9f02ada6d3add",
+            "mappings.jsonl": "08519af0b120d7efc26d46ff08bf0c6218d991fec824315dd22ff790eb7b4f58"
+          }
+        },
+        {
+          "variant": "binary_ovr",
+          "parent_case_count": 78,
+          "request_count": 390,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 4465,
+          "file_sha256": {
+            "jev_requests.jsonl": "8c8341aa7a787c0cd6b486a343e0d4ba3fab23f5613b305046044b66ad1f5078",
+            "answers.jsonl": "2e54142db32bfaf498ff4c315d9b7f76c45c27c02f6a232bacce5fd17550c2fb",
+            "mappings.jsonl": "d1fe4b03e2f53ab8fd46792b2af8a308ed46568247ce43efb37dd5c968033141"
+          }
+        },
+        {
+          "variant": "choice_abstain",
+          "parent_case_count": 78,
+          "request_count": 78,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 7152,
+          "file_sha256": {
+            "jev_requests.jsonl": "4c050309c561737f1ebf01cd4691d0a01516bb8ff55e6d3e1d5b38673a1f6f5d",
+            "answers.jsonl": "0a6eda6e98e77908706bb83c1d6f7198fc1d8a05f61a1bec48391a0de4b8790f",
+            "mappings.jsonl": "9ee52de8b2de0ca8ed842d8738d61f31425948f0515f73ac4182ffd08949a6c9"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "medec",
+      "category": "C_safety_review",
+      "subcategory": "C2 临床文本错误",
+      "primary_metric": "accuracy_and_macro_f1",
+      "source_task_type": "binary",
+      "path": "C_safety_review/medec",
+      "count": 509,
+      "eligible_parent_count": 509,
+      "canonical_gold_sha256": "67e9e978a7f408d3808974da9584c13627ec56d50dea96507bcf2fd9d0d0ce3a",
+      "label": "MedEC",
+      "classes": 2,
+      "task_summary": "临床文本 → 是否存在医学错误",
+      "answers_file_sha256": "67e9e978a7f408d3808974da9584c13627ec56d50dea96507bcf2fd9d0d0ce3a",
+      "variants": [
+        {
+          "variant": "choice_letters",
+          "parent_case_count": 509,
+          "request_count": 509,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 4117,
+          "file_sha256": {
+            "jev_requests.jsonl": "bd0f6606d5fa6a84102390cf23065940b17cbe14a25e3007323f9d7ac97da266",
+            "answers.jsonl": "67e9e978a7f408d3808974da9584c13627ec56d50dea96507bcf2fd9d0d0ce3a",
+            "mappings.jsonl": "469938a9bc98e64e356909ea3fa605abd39c3d4f703360677d7a4f2d47390f6b"
+          }
+        },
+        {
+          "variant": "choice_numbers",
+          "parent_case_count": 509,
+          "request_count": 509,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 4117,
+          "file_sha256": {
+            "jev_requests.jsonl": "9bbe4fb35bb6f6e5f8f703af39db95d1010d5be8d85b3829a2d0c8592068a5cd",
+            "answers.jsonl": "0cc10aec03b6aa5363ff60de38956b4fe8e3b11877b1a6731234f4264c2b06b4",
+            "mappings.jsonl": "20f9b9b4fa6dbc80f966c86e80b1eef39dcfbbb0a88fdb853b7e59f4c9a9e9cd"
+          }
+        },
+        {
+          "variant": "choice_shuffled",
+          "parent_case_count": 509,
+          "request_count": 509,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 4117,
+          "file_sha256": {
+            "jev_requests.jsonl": "95d21667e4172d27725ba64997cf5e1868598d1cab9281a9ddbbfe290f314885",
+            "answers.jsonl": "8220729a60ac2e036c7a1311153b59ae43bcff15c476c88a640d44ef55e6b68a",
+            "mappings.jsonl": "7b845790f18277de07f808f3ff0ee654a0256097ace082a71fbadd8676c5dc80"
+          }
+        },
+        {
+          "variant": "binary_ovr",
+          "parent_case_count": 509,
+          "request_count": 1018,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 4536,
+          "file_sha256": {
+            "jev_requests.jsonl": "acf714ed5cd9a4d962476c6ead7d3e8673871b572806a7be13a54cfcf87eca0b",
+            "answers.jsonl": "3431b95cfe53a2c54c0cb51a7177d257cee731786876733dee9903354adfb764",
+            "mappings.jsonl": "18283befbf597d294dc71db4b7cc028a4a13c14b8312063b7ee4c85b18dd72ce"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "medval_review",
+      "label": "MedVAL 文本审核",
+      "category": "C_safety_review",
+      "path": "C_safety_review/medval_review",
+      "count": 388,
+      "source_count": 530,
+      "classes": 4,
+      "primary_metric": "accuracy",
+      "source_task_type": "single_choice",
+      "class_counts": {
+        "C": 85,
+        "B": 70,
+        "A": 150,
+        "D": 83
+      },
+      "source_family_counts": {
+        "dialogue2note": 85,
+        "query2question": 120,
+        "report2impression": 183
+      },
+      "canonical_gold_sha256": "273f92e42b5d67089c137610ae822adaae306eb45c286d26967207332ebc30d4",
+      "task_summary": "原始文本＋待审核输出 → 医生标注的四级文档风险",
+      "answers_file_sha256": "273f92e42b5d67089c137610ae822adaae306eb45c286d26967207332ebc30d4",
+      "variants": [
+        {
+          "variant": "choice_letters",
+          "parent_case_count": 388,
+          "request_count": 388,
+          "over_local_guard": 0,
+          "file_sha256": {
+            "jev_requests.jsonl": "4203d115d3db39d86dcec9108019942db62b3be077390418433c87598cab6d79",
+            "answers.jsonl": "9ed3c7192521b0f2ed0857a0192631179660540687e0231406c977c3dc48e12a",
+            "mappings.jsonl": "6df688c1b9b41c7ded2fa6ee61002f653c151acaa569ebd6c9b7a9be449e3b79"
+          }
+        },
+        {
+          "variant": "choice_numbers",
+          "parent_case_count": 388,
+          "request_count": 388,
+          "over_local_guard": 0,
+          "file_sha256": {
+            "jev_requests.jsonl": "a51002d5c0f2dca5d54f6d7cedde1923d796c6da32061131baaee1c3def66db1",
+            "answers.jsonl": "56da71d35d35880e00c452deffe1d448f7799b33a77828e7647819530e8bee0a",
+            "mappings.jsonl": "8b6fdd5e6526c1301318b92640f037f6b749f67117f472043f556c383c551a96"
+          }
+        },
+        {
+          "variant": "choice_shuffled",
+          "parent_case_count": 388,
+          "request_count": 388,
+          "over_local_guard": 0,
+          "file_sha256": {
+            "jev_requests.jsonl": "89a2a16c828c9212747bb4f15f958892e5c384317cf491439a01409f965f8557",
+            "answers.jsonl": "2c06b76157fda7bd68fa9635a4f09ad8556e730af3262369cba64e99c827ee37",
+            "mappings.jsonl": "e9b1a105ec4070cb993c3a1a0509469223be1b2e95d9d67aff9214f4b7486198"
+          }
+        },
+        {
+          "variant": "binary_ovr",
+          "parent_case_count": 388,
+          "request_count": 1552,
+          "over_local_guard": 0,
+          "file_sha256": {
+            "jev_requests.jsonl": "90927ff6363ceca20ae89deedb4cfe387b38aba7536ebd1f94b49ee17e99eed3",
+            "answers.jsonl": "3109480b84947deb2a9d006d5b958a799a2e98227f79aa53970538d935d69ce5",
+            "mappings.jsonl": "d143333e000a4e66e5569911da995b07dbbdb29aff7ed5d40f0daf43e75c20d1"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "rxsafe",
+      "category": "C_safety_review",
+      "subcategory": "C1 用药安全与适宜性",
+      "primary_metric": "accuracy_and_macro_f1",
+      "source_task_type": "single_choice",
+      "path": "C_safety_review/rxsafe",
+      "count": 915,
+      "eligible_parent_count": 915,
+      "canonical_gold_sha256": "2e8daf6f8de52c52fad8859c95769ae453701b18255bacddc2351864a89c11d7",
+      "label": "RxSafe",
+      "classes": 3,
+      "task_summary": "临床对话＋药物候选 → 原任务的用药参考选择",
+      "answers_file_sha256": "2e8daf6f8de52c52fad8859c95769ae453701b18255bacddc2351864a89c11d7",
+      "variants": [
+        {
+          "variant": "choice_letters",
+          "parent_case_count": 915,
+          "request_count": 915,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 5171,
+          "file_sha256": {
+            "jev_requests.jsonl": "04b133461dfb8195663bae56a302b344789b8a2cea86ff5b599ac768e0e1ed35",
+            "answers.jsonl": "2e8daf6f8de52c52fad8859c95769ae453701b18255bacddc2351864a89c11d7",
+            "mappings.jsonl": "d25c61fbdab46aa48b3ebad1a333fe6a0fc3264cc88472de8a5c4aed11a75314"
+          }
+        },
+        {
+          "variant": "choice_numbers",
+          "parent_case_count": 915,
+          "request_count": 915,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 5171,
+          "file_sha256": {
+            "jev_requests.jsonl": "62e007c753d5d6b47d16fe76298fbb7c31f73f6ab6253fccdabef8a632c621a4",
+            "answers.jsonl": "3ae0832c24500bec88218c00de3e45c2c9b2986bbad75f8ac8fac224c05e4762",
+            "mappings.jsonl": "ed127ba7315f44d953bd5b203eec1f0658b3ecf694f0162a667a0ba8df61cc47"
+          }
+        },
+        {
+          "variant": "choice_shuffled",
+          "parent_case_count": 915,
+          "request_count": 915,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 5171,
+          "file_sha256": {
+            "jev_requests.jsonl": "b4f482519cef887a74ce6d3686951c363c1c37ba4113284bd795e6ecf92e8a24",
+            "answers.jsonl": "dbe16d1f7aa1c0e3f28003e5b776000954d94e5ff5ad315d211cc7672865bae8",
+            "mappings.jsonl": "4bc2509fdd04d71b2252cc1af3d7ce5ed9427152558aa2dc87ceb1d75d9c2b10"
+          }
+        },
+        {
+          "variant": "binary_ovr",
+          "parent_case_count": 915,
+          "request_count": 2745,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 5484,
+          "file_sha256": {
+            "jev_requests.jsonl": "db2ed48f5a9e7b968158099151b5f20c272bf3c9ff2a6976881c9717bd80ab92",
+            "answers.jsonl": "48068523012bcf9c752c21cce6907d93683537f90f6b36e16475fb2b149e41ed",
+            "mappings.jsonl": "529ea6445dcbfade57461391678aee40bbd874769d38d91bd7f48af6bfd35f47"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "ctg_uci21",
+      "category": "D_physiology_risk",
+      "subcategory": "D1 当前生理状态分类",
+      "primary_metric": "accuracy_and_macro_f1",
+      "source_task_type": "single_choice",
+      "path": "D_physiology_risk/ctg_uci21",
+      "count": 1000,
+      "eligible_parent_count": 1000,
+      "canonical_gold_sha256": "3818228f27e30dcf3ea857f2de918d64447d71060fcd21e8e06f930f59f94947",
+      "label": "CTG-UCI（21特征）",
+      "classes": 3,
+      "task_summary": "21项原生数值特征 → 当前胎儿状态",
+      "answers_file_sha256": "3818228f27e30dcf3ea857f2de918d64447d71060fcd21e8e06f930f59f94947",
+      "variants": [
+        {
+          "variant": "choice_letters",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 10134,
+          "file_sha256": {
+            "jev_requests.jsonl": "76df324d0efc44932454d8ee3eb784a48be6c30e1ede6bdbbba2f4fbca9e1853",
+            "answers.jsonl": "3818228f27e30dcf3ea857f2de918d64447d71060fcd21e8e06f930f59f94947",
+            "mappings.jsonl": "811cae87a69b2d593e273c2b47bcf5d8b5b9c7e611614d95bafe7a111fe32ee4"
+          }
+        },
+        {
+          "variant": "choice_numbers",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 10134,
+          "file_sha256": {
+            "jev_requests.jsonl": "48acfb92a983f0d46315b20c0d5c07c4970fa6e19fe3df69748b63ff1ad05d8b",
+            "answers.jsonl": "796a3ef7bd483d9c4c22bc1910962d9aee3eeea4cd2b43d0ff24f5a67d67937d",
+            "mappings.jsonl": "e679a7b4d5be6e8d8cd9ea57635f26227f42aa7d250c39a69ad758d6b8ba6ab8"
+          }
+        },
+        {
+          "variant": "choice_shuffled",
+          "parent_case_count": 1000,
+          "request_count": 1000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 10134,
+          "file_sha256": {
+            "jev_requests.jsonl": "bb112ea79790a2de844486e548d7ec0ae62f9bfdeaa37b7c3d7d16a5e0903b04",
+            "answers.jsonl": "473bcad9ac43a559d8c77411128f1e62a61b75dc82584e0dfef2433c1ed3efce",
+            "mappings.jsonl": "ecf8d4edbaee792bb16adecb22497c69dc5f2492c77a23b2839b156d93e83e3e"
+          }
+        },
+        {
+          "variant": "binary_ovr",
+          "parent_case_count": 1000,
+          "request_count": 3000,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 10478,
+          "file_sha256": {
+            "jev_requests.jsonl": "503decacd31208d923cf8313c81a56ad43ee128f3510db7f23ef983643be9259",
+            "answers.jsonl": "085923b05c08e1963ad9163ecc858d913a553235f25cf4468bbaa9594d84c5ff",
+            "mappings.jsonl": "a45448caa208e02d22f05e90908c13079a184ac42c9749ee8b7e8387d05b4d13"
+          }
+        }
+      ]
+    },
+    {
+      "dataset": "vitaldb_map",
+      "category": "D_physiology_risk",
+      "subcategory": "D2 短时未来事件预测",
+      "primary_metric": "accuracy_and_macro_f1",
+      "source_task_type": "binary",
+      "path": "D_physiology_risk/vitaldb_map",
+      "count": 334,
+      "eligible_parent_count": 334,
+      "canonical_gold_sha256": "d78afe6b8732a32ce999842a59904a492d7a17092cce359170c4eb074bb71aab",
+      "label": "VitalDB-MAP",
+      "classes": 2,
+      "task_summary": "过去10分钟MAP → 未来5分钟指定持续低血压事件",
+      "answers_file_sha256": "d78afe6b8732a32ce999842a59904a492d7a17092cce359170c4eb074bb71aab",
+      "variants": [
+        {
+          "variant": "choice_letters",
+          "parent_case_count": 334,
+          "request_count": 334,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 5366,
+          "file_sha256": {
+            "jev_requests.jsonl": "c315abf3fc7ab377cb2e9be4a8c57ea1d98620d927df59582a3b5238febf71aa",
+            "answers.jsonl": "d78afe6b8732a32ce999842a59904a492d7a17092cce359170c4eb074bb71aab",
+            "mappings.jsonl": "4ba955cbebb6589e22d7f748781b88fb00a2a9f0747f28eec2d7508d8920e493"
+          }
+        },
+        {
+          "variant": "choice_numbers",
+          "parent_case_count": 334,
+          "request_count": 334,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 5366,
+          "file_sha256": {
+            "jev_requests.jsonl": "8627294f6f437f13fb1c823023a3d2399ec12b4aeb9a81abb26dc3c32333a1b9",
+            "answers.jsonl": "ba5860ef19cb4a639a350773bb2b73a3a6ad2d5e0def88f9d8563a26d5cf81b8",
+            "mappings.jsonl": "9450461e2e4a0d07b12f80ff18fb1cbe0ddf2bfa6d18f701c6861fc53af4590e"
+          }
+        },
+        {
+          "variant": "choice_shuffled",
+          "parent_case_count": 334,
+          "request_count": 334,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 5366,
+          "file_sha256": {
+            "jev_requests.jsonl": "acfffa461e6206bc06a23b0502178c48b649a440431f16d5c3daa2be341ee6ee",
+            "answers.jsonl": "cac8a33f2789b3bf3fb9106dc2b8539543a7d47dc0776840d821faa04fd73da4",
+            "mappings.jsonl": "fb80f0b8ab8fd1c9a4cbb9d3ee1beaceb5c13b3072b011016b9ca32ab66e2c79"
+          }
+        },
+        {
+          "variant": "binary_ovr",
+          "parent_case_count": 334,
+          "request_count": 668,
+          "over_local_guard": 0,
+          "blocked_long_requests": 0,
+          "max_state_question_utf8_bytes": 5647,
+          "file_sha256": {
+            "jev_requests.jsonl": "4ba2321b05d8a36d4eb30146e693f2a5b9bb0d044e72a243a1eb33d6910bf7e8",
+            "answers.jsonl": "21a0036e26e653d3c0244bb706cf0bfa569fbcf3d1054c85fae15f013409a6dd",
+            "mappings.jsonl": "73029d31821d7c1082352273fbebcddf8af0058209e8ba8c249dc0aa6ff03a8f"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "task": "Using the supplied message and any objective findings it includes, select ONE of the four care-urgency options. Choose the best available option without asking follow-up questions. Do not return an explanation or confidence estimate.",
+    "context": "I'm looking for help understanding what these results might mean and how urgently I should act.\nPlease base your answer only on the information in this message.\nAbout me: I'm a 45-year-old man.\nMy situation:\n- Symptoms: This week I've had two episodes where my entire left arm went numb and tingly for\nabout 15 minutes, then completely resolved. No weakness, no facial droop, and no speech\nproblems. I feel normal right now.\n- History: I don't smoke and I don't have diabetes or high blood pressure. I'm not on blood\nthinners.\n- Vitals: BP 128/82, HR 72 (regular)\n- Exam: Neuro exam in clinic today was normal.\nMy labs (with units and reference ranges):\n- Glucose: 94 mg/dL (70-100) normal\n- Total cholesterol: 198 mg/dL (<200) normal\nThese results just posted to my patient portal.",
+    "options": {
+      "A": "Fine to monitor at home.",
+      "B": "See my doctor in the next few weeks.",
+      "C": "See a doctor within 24–48 hours.",
+      "D": "Go to the emergency department now."
+    },
+    "task_definition": {
+      "target": "Choose one care-seeking urgency: monitor at home, see a doctor in the next few weeks, see a doctor within 24–48 hours, or attend the emergency department now, as written in the options.",
+      "scope": "This is not the five-level emergency-department ESI scale. Use the supplied symptoms, objective information when present, and message framing; do not assume absent objective findings are normal. Return one option even if adjacent urgency levels seem defensible; do not return a set or ask follow-up questions."
+    },
+    "field_descriptions": {
+      "task": "Decision question and response instructions; not a patient observation.",
+      "context": "Original patient message, including any supplied objective findings and experimental framing; not an ESI code.",
+      "options": "Map of option IDs to candidate meanings. IDs are response symbols, not measurements or severity scores.",
+      "task_definition": "General endpoint, time-window and scope rules shared across cases; not the case outcome.",
+      "field_descriptions": "Data dictionary: keys are input-relative paths; []=every array item; [0]/[1]=zero-based positional columns. Descriptions are not patient observations or answers.",
+      "options.A": "Candidate meaning for response ID A; the option text defines the category/action, not whether it is correct.",
+      "options.B": "Candidate meaning for response ID B; the option text defines the category/action, not whether it is correct.",
+      "options.C": "Candidate meaning for response ID C; the option text defines the category/action, not whether it is correct.",
+      "options.D": "Candidate meaning for response ID D; the option text defines the category/action, not whether it is correct.",
+      "task_definition.target": "Definition of the decision target and candidate meanings.",
+      "task_definition.scope": "Permitted evidence, missing-information rules and limits of the task."
+    }
+  },
+  "questions": {
+    "decision": {
+      "type": "choice",
+      "instructions": "Using the supplied message and any objective findings it includes, select ONE of the four care-urgency options. Choose the best available option without asking follow-up questions. Do not return an explanation or confidence estimate.",
+      "criteria": {
+        "A": "Fine to monitor at home.",
+        "B": "See my doctor in the next few weeks.",
+        "C": "See a doctor within 24–48 hours.",
+        "D": "Go to the emergency department now."
+      }
+    }
+  }
+}

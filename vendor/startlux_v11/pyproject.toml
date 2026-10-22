@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "startlux-decide"
+version = "1.1.0"
+description = "Inference engine and server for the StartLux-Decision models: a calibrated probability for every option of a typed question"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+dependencies = [
+    "aiohttp>=3.9",          # the server and the HTTP engines
+    "transformers>=5.6",     # the model folder's tokenizer and chat template
+]
+authors = [{name = "StartLux"}]
+keywords = ["decision models", "llm", "inference", "vllm", "llama.cpp", "mlx", "calibration"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.urls]
+Homepage = "https://decision.startlux.com/"
+Repository = "https://github.com/StartLuxLabs/StartLux-Decision"
+Documentation = "https://github.com/StartLuxLabs/StartLux-Decision/tree/main/docs"
+Issues = "https://github.com/StartLuxLabs/StartLux-Decision/issues"
+Models = "https://huggingface.co/startlux-models"
+
+[project.optional-dependencies]
+vllm = ["vllm==0.31.0"]                              # the vLLM plugin is validated on 0.31.0 and on 0.19.1 (the release runs)
+transformers = ["torch>=2.4", "transformers>=5.8,<5.9"]  # the bidirectional read-out reproduces transformers 5.8
+llamacpp = []                                        # llama-server is a separate program (llama.cpp)
+mlx = ["mlx-vlm>=0.7.6"]                              # the MLX engine; brings mlx
+
+[project.scripts]
+startlux-decide = "startlux_decide.cli:main"
+
+[project.entry-points."vllm.general_plugins"]
+startlux_prefix_bidir = "startlux_decide.vllm_plugin:plugin"
+
+[tool.setuptools.packages.find]
+include = ["startlux_decide*"]

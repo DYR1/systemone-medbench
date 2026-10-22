@@ -1,0 +1,49 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "task": "Answer the original clinical question in context.original_question by selecting exactly one displayed option ID. Preserve the question’s decision time and requested type of action.",
+    "context": {
+      "original_question": "A 35-year-old man comes to the physician because of itchy, watery eyes for the past week. He has also been sneezing multiple times a day during this period. He had a similar episode 1 year ago around springtime. He has iron deficiency anemia and ankylosing spondylitis. Current medications include ferrous sulfate, artificial tear drops, and indomethacin. He works as an elementary school teacher. His vital signs are within normal limits. Visual acuity is 20/20 without correction. Physical examination shows bilateral conjunctival injection with watery discharge. The pupils are 3 mm, equal, and reactive to light. Examination of the anterior chamber of the eye is unremarkable. Which of the following is the most appropriate treatment?"
+    },
+    "options": {
+      "A": "Erythromycin ointment",
+      "B": "Ketotifen eye drops",
+      "C": "Warm compresses",
+      "D": "Fluorometholone eye drops"
+    },
+    "task_definition": {
+      "target": "Select the best clinical management, treatment, or diagnostic-investigation response to the original question.",
+      "scope": "Text-only medical-exam decision subset, including acute and non-acute care. Not a prospective patient-care validation or a guarantee of low-latency emergency relevance.",
+      "evidence": "The original case and question are reproduced without summarization. Use clinical knowledge to interpret them; do not invent unreported results. Unreported findings are not automatically normal.",
+      "response": "Return one currently displayed option ID. Candidate meanings, not their positions, determine the response."
+    },
+    "field_descriptions": {
+      "task": "The clinical decision or text-review target and requested response format.",
+      "context": "Complete supplied evidence for the task; not source labels or grading annotations.",
+      "options": "Displayed candidate responses. Choose by their meanings, not identifier position.",
+      "task_definition": "Definitions, evidence boundaries and limitations of this offline task.",
+      "field_descriptions": "Dictionary explaining each input field; not additional clinical evidence.",
+      "context.original_question": "Unabridged source clinical vignette and its original question, including all provided measurements and decision timing.",
+      "task_definition.target": "What outcome or response the question asks the model to identify.",
+      "task_definition.scope": "Intended evaluation setting and limits on interpreting the result.",
+      "task_definition.evidence": "Which evidence is visible and how missing or unreported information is treated.",
+      "task_definition.response": "How to select a response from the displayed candidates.",
+      "options.A": "Candidate meaning for response ID A; the identifier itself has no clinical meaning.",
+      "options.B": "Candidate meaning for response ID B; the identifier itself has no clinical meaning.",
+      "options.C": "Candidate meaning for response ID C; the identifier itself has no clinical meaning.",
+      "options.D": "Candidate meaning for response ID D; the identifier itself has no clinical meaning."
+    }
+  },
+  "questions": {
+    "decision": {
+      "type": "choice",
+      "instructions": "Answer the original clinical question in context.original_question by selecting exactly one displayed option ID. Preserve the question’s decision time and requested type of action.",
+      "criteria": {
+        "A": "Erythromycin ointment",
+        "B": "Ketotifen eye drops",
+        "C": "Warm compresses",
+        "D": "Fluorometholone eye drops"
+      }
+    }
+  }
+}

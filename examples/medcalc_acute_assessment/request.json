@@ -1,0 +1,45 @@
+{
+  "model": "jev-1.13.0",
+  "state": {
+    "task": "Using the complete original patient note and the original question to identify the requested assessment and time point, apply the scoring_rules and choose whether the specified flag is met. Choose A or B; the binary flag replaces the original numeric-output format.",
+    "context": {
+      "calculator": "Glasgow Coma Score (GCS)",
+      "patient_note": "A 66-year-old female was brought to the emergency department by local emergency services after being discovered unresponsive in her residence by a concerned neighbor who had not seen her for several days. Upon arrival, she was found lying supine on her living room floor without any obvious signs of recent trauma around her, although there was evidence of spilled medication bottles on a nearby table. According to the neighbor’s account, the patient had been complaining of fatigue and episodes of dizziness in the preceding weeks, but she was reluctant to seek medical care despite gentle urging. Past records, available through a local clinic, revealed a history of chronic obstructive pulmonary disease and intermittent anemia for which she occasionally received supplemental iron therapy, though documentation suggested her adherence to follow-up appointments was sporadic. At the time of the initial examination, she did not appear to open her eyes spontaneously or in response to any attempts at verbal engagement, such as calling her name or speaking loudly beside her. Even when gentle physical contact was applied to her shoulders and arms, there was no blinking or any discernable rise in eyelid position, indicating an absence of visible ocular reaction. Her facial expression remained largely fixed, with no purposeful scanning of the environment or recognition of staff members. Vital signs showed a blood pressure that was moderately elevated; a pulse that was erratic, though not critically high; and a respiratory rate that hovered near the lower end of normal. However, her breathing pattern was shallow and interspersed with occasional brief pauses, prompting concern for potential respiratory compromise. Further assessment of her airway indicated that it remained patent, yet there was a distinct risk of obstruction given her depressed level of responsiveness, so careful suctioning was performed to clear any pooled secretions. When clinical staff attempted to elicit a vocal response by calling her name and lightly shaking her shoulder, her only reactions consisted of prolonged, low-pitched murmurs devoid of recognizable words or phrases. These sounds emerged irregularly, without coherent articulation or the forming of any intelligible syllables. Despite repeated attempts by multiple team members to communicate basic questions, she was unable to provide structured replies, and there was no indication that she could understand or follow simple commands. Neurological evaluation revealed that she displayed a distinct posture when exposed to a noxious stimulus, such as a firm press on the nail bed or a pinch to the trapezius region. Rather than pulling away purposefully or trying to pinpoint and remove the source of discomfort, she drew her arms and wrists inward in an uncoordinated, reflex-like manner, failing to extend them outward or accurately push away the examiner’s hand. Throughout these maneuvers, her lower extremities did not demonstrate any clear attempts at coordinated withdrawal, though intermittent subtle stirring of the legs could be observed. There were no overt signs of external head trauma, but it could not be definitively ruled out without imaging. Her pupils were symmetrical in size and reactive to light, yet no spontaneous or divergent eye movements were noted. Preliminary laboratory tests revealed mild borderline anemia, which was consistent with her medical history, while her serum glucose level was slightly reduced. A toxicology screen was pending, given the possibility of inadvertent or intentional overdose, as suggested by the scattered medication bottles found at her home. Given her diminished ability to protect her airway and the potential for rapid deterioration, the clinical team prepared for airway management while arranging for urgent imaging studies. No definitive diagnosis was made at the time of initial presentation, though the leading considerations included metabolic derangements, possible cerebrovascular events, or sepsis. Additional consultations with neurology and critical care were requested to help guide further interventions.",
+      "original_question": "What is the patient's Glasgow Coma Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment."
+    },
+    "options": {
+      "A": "The specified score flag is NOT met.",
+      "B": "The specified score flag IS met."
+    },
+    "task_definition": {
+      "target": "Compute the named score, then apply its stated flag threshold. A=no flag, B=flag.",
+      "scope": "Original source note and question are provided without prefix truncation. Use the time point requested in original_question; later events in the note are not automatically measurements at that time. Output only the derived flag, not the source numeric answer. Missing measurements are not normal; a score flag is not a treatment recommendation.",
+      "scoring_rules": "Eye: spontaneous=4, to speech=3, to pain=2, none=1. Verbal: oriented=5, confused=4, inappropriate words=3, incomprehensible sounds=2, none=1. Motor: obeys commands=6, localizes pain=5, withdraws from pain=4, flexion to pain=3, extension to pain=2, none=1. Sum all three. Severe-impairment score flag: total <=8. A non-testable component must not be assumed normal."
+    },
+    "field_descriptions": {
+      "task": "Decision question and response instructions; not a patient observation.",
+      "context": "Patient information available for this task; absent findings are unknown, not normal.",
+      "options": "Map of option IDs to candidate meanings. IDs are response symbols, not measurements or severity scores.",
+      "task_definition": "General endpoint, time-window and scope rules shared across cases; not the case outcome.",
+      "field_descriptions": "Input-field dictionary, not observations or answers.",
+      "context.calculator": "Original source calculator name.",
+      "context.patient_note": "Complete original source patient note, unabridged; no answer or worked solution field added.",
+      "context.original_question": "Original source question, including assessment-time instructions. The outer task changes only numeric output to the specified binary flag.",
+      "options.A": "Candidate meaning for response ID A; not an answer indicator.",
+      "options.B": "Candidate meaning for response ID B; not an answer indicator.",
+      "task_definition.target": "Shared target rules, not this case outcome.",
+      "task_definition.scope": "Shared scope rules, not this case outcome.",
+      "task_definition.scoring_rules": "Shared scoring rules rules, not this case outcome."
+    }
+  },
+  "questions": {
+    "decision": {
+      "type": "choice",
+      "instructions": "Using the complete original patient note and the original question to identify the requested assessment and time point, apply the scoring_rules and choose whether the specified flag is met. Choose A or B; the binary flag replaces the original numeric-output format.",
+      "criteria": {
+        "A": "The specified score flag is NOT met.",
+        "B": "The specified score flag IS met."
+      }
+    }
+  }
+}

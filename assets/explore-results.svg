@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="120" viewBox="0 0 1200 120" role="img" aria-labelledby="title desc">
+  <title id="title">Explore the interactive results — Medical Decision Atlas</title>
+  <desc id="desc">Open the public evaluation website to compare models, task families, robustness, abstention and probability-based selection.</desc>
+  <rect x="1" y="1" width="1198" height="118" rx="16" fill="#edf9f5" stroke="#b5ddd0"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <rect x="28" y="30" width="56" height="56" rx="14" fill="#147d64"/>
+    <path d="M43 68V50M56 68V42M69 68V55" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+    <text x="108" y="51" fill="#125b4c" font-size="26" font-weight="700">Explore the interactive results</text>
+    <text x="108" y="85" fill="#427567" font-size="18">Medical Decision Atlas · Model comparisons across all four evaluation dimensions</text>
+    <path d="M1100 60h44m-17-17 17 17-17 17" fill="none" stroke="#147d64" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
